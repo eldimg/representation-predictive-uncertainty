@@ -1,0 +1,81 @@
+{
+  "experiment": "Experiment 7 Cross-Model Replication",
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "revision_requested": "main",
+  "model_commit_hash": "f39ac1d28e925b323eae81227eaba4464caced4e",
+  "model_type": "phi3",
+  "architectures": [
+    "Phi3ForCausalLM"
+  ],
+  "dtype": "bfloat16",
+  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_size": 32011,
+  "model_vocab_size": 32064,
+  "valid_vocab_size_used": 32011,
+  "n_trajectories": 600,
+  "n_tasks": 100,
+  "n_families": 50,
+  "boundary_crossing_trajectories": 0,
+  "primary_top20": {
+    "mean_entropy_nl": 1.0008805382425674,
+    "mean_entropy_python": 0.341657443287196,
+    "relative_reduction_python_vs_nl": 0.658643134487251,
+    "n_tasks": 100,
+    "mean_delta_nl_minus_python": 0.6592230949553717,
+    "median_delta": 0.6352079002344095,
+    "sd_delta": 0.19867859716160405,
+    "cohens_dz": 3.3180377975950943,
+    "positive_tasks": 100,
+    "positive_fraction": 1.0,
+    "exact_sign_test_p_one_sided": 7.888609052210118e-31,
+    "signflip_monte_carlo": {
+      "observed_mean": 0.6592230949553717,
+      "extreme_resamples": 0,
+      "n_resamples": 200000,
+      "p_one_sided_plus1": 4.9999750001249995e-06
+    },
+    "bootstrap_99_ci": [
+      0.60793946624353,
+      0.7108540012023831
+    ]
+  },
+  "secondary_valid_vocab": {
+    "mean_entropy_nl": 1.1609311392648507,
+    "mean_entropy_python": 0.3855901403190986,
+    "relative_reduction_python_vs_nl": 0.667861316422893,
+    "n_tasks": 100,
+    "mean_delta_nl_minus_python": 0.775340998945752,
+    "median_delta": 0.7599106542856504,
+    "sd_delta": 0.2571086859507157,
+    "cohens_dz": 3.015615734951773,
+    "positive_tasks": 100,
+    "positive_fraction": 1.0,
+    "exact_sign_test_p_one_sided": 7.888609052210118e-31,
+    "signflip_monte_carlo": {
+      "observed_mean": 0.775340998945752,
+      "extreme_resamples": 0,
+      "n_resamples": 200000,
+      "p_one_sided_plus1": 4.9999750001249995e-06
+    },
+    "bootstrap_99_ci": [
+      0.7095967329495914,
+      0.8420502845503437
+    ]
+  },
+  "mean_p1_nl": 0.6796062050909406,
+  "mean_p1_python": 0.8930334120530489,
+  "family_robustness_primary": {
+    "positive_families": 50,
+    "total_families": 50,
+    "min_family_delta": 0.2094730202930411,
+    "max_family_delta": 1.0050464610185341
+  },
+  "frozen_evidence_criteria_primary": {
+    "signflip_p_lt_0_01": true,
+    "bootstrap_99_ci_entirely_above_zero": true,
+    "at_least_70_of_100_tasks_positive": true,
+    "at_least_35_of_50_families_positive": true,
+    "all_four_pass": true
+  },
+  "interpretation_guardrail": "Do not rank raw entropy magnitudes across models/tokenizers. The replication target is the within-model NL-minus-Python effect."
+}

@@ -1,0 +1,39 @@
+{
+  "backend": "direct_hf_bfloat16",
+  "top20_comparable": {
+    "metric": "mean_entropy_top20",
+    "n_tasks": 100,
+    "mean_delta_nl_minus_python": 0.3604636771174562,
+    "median_delta": 0.3549234545595626,
+    "positive_tasks": 100,
+    "positive_fraction": 1.0,
+    "cohens_dz": 2.503356800529396,
+    "signflip_p_one_sided": 4.9999750001249995e-06,
+    "bootstrap_99_ci": [
+      0.32312414677456275,
+      0.3977158346571436
+    ],
+    "wilcoxon_p_one_sided": 1.9482799225479546e-18,
+    "paired_t_p_one_sided": 6.460107991011706e-45
+  },
+  "full_vocab_exact": {
+    "metric": "mean_entropy_full",
+    "n_tasks": 100,
+    "mean_delta_nl_minus_python": 0.37870211910937795,
+    "median_delta": 0.3626411516045107,
+    "positive_tasks": 100,
+    "positive_fraction": 1.0,
+    "cohens_dz": 2.3534230240900915,
+    "signflip_p_one_sided": 4.9999750001249995e-06,
+    "bootstrap_99_ci": [
+      0.3370489523358989,
+      0.4204365401369149
+    ],
+    "wilcoxon_p_one_sided": 1.9482799225479546e-18,
+    "paired_t_p_one_sided": 1.2226154231225907e-42
+  },
+  "mean_entropy_top20_nl": 0.5394998116820673,
+  "mean_entropy_top20_python": 0.1790361345646111,
+  "mean_entropy_full_nl": 0.5639209165426008,
+  "mean_entropy_full_python": 0.1852187974332228
+}

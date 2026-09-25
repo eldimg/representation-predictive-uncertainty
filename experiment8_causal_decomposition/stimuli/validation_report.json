@@ -1,0 +1,372 @@
+{
+  "experiment": "Experiment 8 Sequential Representational Interventions",
+  "schema_version": "2.0",
+  "generated_at_utc": "2026-09-16T13:22:56.384636+00:00",
+  "passed": true,
+  "errors": [],
+  "counts": {
+    "tasks": 100,
+    "families": 50,
+    "programs": 300,
+    "rendered_trajectories": 1800,
+    "conditions": 6,
+    "span_errors": 0,
+    "differential_pairs": 300,
+    "differential_passed": 300
+  },
+  "hashes": {
+    "tasks_file_sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164",
+    "ir_file_sha256": "ae6214ef102ef7188d3959ce14b9e8e3439b70561eca6438d634fda2adcd9bb3",
+    "ir_content_sha256": "0d843e99436915a2bf58e6d18a3871186bef3911c5253e907d9aeeee7ffccb18",
+    "rendered_file_sha256": "0fcc7c0b54f9608c174a75c404344ae01af229ba7c31c5e3f18972b8fb2bbe1e",
+    "rendered_content_sha256": "dd23c7af8c16bc83f1fd22c75d3ec1938fbe6b552f49c8f17c8adc636250cd69"
+  },
+  "audit": {
+    "random_seed": 20260916,
+    "selected_task_count": 21,
+    "selected_tasks": [
+      "binary_search_exact",
+      "contains_target",
+      "count_equal_neighbors",
+      "dedupe_last",
+      "digit_product",
+      "group_by_first_character",
+      "group_by_length",
+      "is_subset",
+      "list_palindrome",
+      "matrix_find_position",
+      "merge_sorted_descending",
+      "most_frequent",
+      "numeric_palindrome",
+      "ordered_unique_intersection",
+      "partition_by_sign",
+      "reverse_integer",
+      "reverse_string",
+      "rotate_right_one",
+      "square_values",
+      "sum_positive",
+      "count_primes_up_to"
+    ],
+    "construct_coverage": {
+      "attribute_or_method": [
+        "dedupe_last",
+        "group_by_first_character",
+        "group_by_length",
+        "merge_sorted_descending",
+        "most_frequent",
+        "ordered_unique_intersection",
+        "partition_by_sign",
+        "rotate_right_one",
+        "square_values"
+      ],
+      "boolean_expression": [
+        "merge_sorted_descending",
+        "ordered_unique_intersection"
+      ],
+      "break": [
+        "count_primes_up_to"
+      ],
+      "dict": [
+        "group_by_first_character",
+        "group_by_length",
+        "most_frequent"
+      ],
+      "function_interface": [
+        "binary_search_exact",
+        "contains_target",
+        "count_equal_neighbors",
+        "count_primes_up_to",
+        "dedupe_last",
+        "digit_product",
+        "group_by_first_character",
+        "group_by_length",
+        "is_subset",
+        "list_palindrome",
+        "matrix_find_position",
+        "merge_sorted_descending",
+        "most_frequent",
+        "numeric_palindrome",
+        "ordered_unique_intersection",
+        "partition_by_sign",
+        "reverse_integer",
+        "reverse_string",
+        "rotate_right_one",
+        "square_values",
+        "sum_positive"
+      ],
+      "nested_control_flow": [
+        "binary_search_exact",
+        "contains_target",
+        "count_equal_neighbors",
+        "count_primes_up_to",
+        "dedupe_last",
+        "group_by_first_character",
+        "group_by_length",
+        "is_subset",
+        "list_palindrome",
+        "matrix_find_position",
+        "merge_sorted_descending",
+        "most_frequent",
+        "ordered_unique_intersection",
+        "partition_by_sign",
+        "sum_positive"
+      ],
+      "while": [
+        "binary_search_exact",
+        "count_primes_up_to",
+        "digit_product",
+        "list_palindrome",
+        "merge_sorted_descending",
+        "numeric_palindrome",
+        "reverse_integer"
+      ]
+    },
+    "audit_file_sha256": "7985105006d457b12b7c3297161aed470d19910e4db3f27bbfafeb7fe1a18d4b"
+  },
+  "differential_execution": {
+    "enabled": true,
+    "passed": true,
+    "failed_programs": [],
+    "total_cases": 945
+  },
+  "tokenizer_coverage": {
+    "qwen3": {
+      "model_id": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "tokenizer_class": "Qwen2Tokenizer",
+      "tokenizer_size": 151669,
+      "conditions": {
+        "procedural_prose": {
+          "all_analyzed": 17989,
+          "eligible": 12518,
+          "mapped": 12398,
+          "punctuation_only": 4175,
+          "whitespace_only": 1296,
+          "unmapped": 120,
+          "step_mapped_token_fraction": 0.9904138041220643,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.009586195877935773,
+          "step_mapped_token_fraction_all_analyzed": 0.6891989549168936,
+          "minimum_trajectory_fraction": 0.8709677419354839,
+          "passes_0_90_gate": true
+        },
+        "controlled_nl": {
+          "all_analyzed": 14464,
+          "eligible": 9441,
+          "mapped": 9411,
+          "punctuation_only": 3649,
+          "whitespace_only": 1374,
+          "unmapped": 30,
+          "step_mapped_token_fraction": 0.9968223705115984,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0031776294884016524,
+          "step_mapped_token_fraction_all_analyzed": 0.6506498893805309,
+          "minimum_trajectory_fraction": 0.95,
+          "passes_0_90_gate": true
+        },
+        "pseudocode": {
+          "all_analyzed": 12843,
+          "eligible": 7354,
+          "mapped": 7324,
+          "punctuation_only": 3470,
+          "whitespace_only": 2019,
+          "unmapped": 30,
+          "step_mapped_token_fraction": 0.9959205874354093,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.004079412564590699,
+          "step_mapped_token_fraction_all_analyzed": 0.5702717433621428,
+          "minimum_trajectory_fraction": 0.9333333333333333,
+          "passes_0_90_gate": true
+        },
+        "python_canonical": {
+          "all_analyzed": 12726,
+          "eligible": 6847,
+          "mapped": 6820,
+          "punctuation_only": 3164,
+          "whitespace_only": 2715,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9960566671534978,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0039433328465021174,
+          "step_mapped_token_fraction_all_analyzed": 0.5359107339305359,
+          "minimum_trajectory_fraction": 0.9545454545454546,
+          "passes_0_90_gate": true
+        },
+        "python_opaque": {
+          "all_analyzed": 18549,
+          "eligible": 12732,
+          "mapped": 12705,
+          "punctuation_only": 3102,
+          "whitespace_only": 2715,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9978793590951932,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.002120640904806786,
+          "step_mapped_token_fraction_all_analyzed": 0.6849425845059033,
+          "minimum_trajectory_fraction": 0.9767441860465116,
+          "passes_0_90_gate": true
+        }
+      },
+      "all_conditions_pass": true
+    },
+    "phi3": {
+      "model_id": "microsoft/Phi-3-mini-4k-instruct",
+      "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+      "tokenizer_class": "TokenizersBackend",
+      "tokenizer_size": 32011,
+      "conditions": {
+        "procedural_prose": {
+          "all_analyzed": 21559,
+          "eligible": 13311,
+          "mapped": 13191,
+          "punctuation_only": 5212,
+          "whitespace_only": 3036,
+          "unmapped": 120,
+          "step_mapped_token_fraction": 0.9909848997070092,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.00901510029299076,
+          "step_mapped_token_fraction_all_analyzed": 0.6118558374692704,
+          "minimum_trajectory_fraction": 0.875,
+          "passes_0_90_gate": true
+        },
+        "controlled_nl": {
+          "all_analyzed": 20106,
+          "eligible": 12137,
+          "mapped": 12107,
+          "punctuation_only": 4933,
+          "whitespace_only": 3036,
+          "unmapped": 30,
+          "step_mapped_token_fraction": 0.997528219494109,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0024717805058910767,
+          "step_mapped_token_fraction_all_analyzed": 0.6021585596339402,
+          "minimum_trajectory_fraction": 0.9607843137254902,
+          "passes_0_90_gate": true
+        },
+        "pseudocode": {
+          "all_analyzed": 16996,
+          "eligible": 8891,
+          "mapped": 8861,
+          "punctuation_only": 5069,
+          "whitespace_only": 3036,
+          "unmapped": 30,
+          "step_mapped_token_fraction": 0.9966258013721742,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0033741986278258912,
+          "step_mapped_token_fraction_all_analyzed": 0.5213579665803718,
+          "minimum_trajectory_fraction": 0.9428571428571428,
+          "passes_0_90_gate": true
+        },
+        "python_canonical": {
+          "all_analyzed": 15897,
+          "eligible": 7037,
+          "mapped": 7010,
+          "punctuation_only": 4870,
+          "whitespace_only": 3990,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9961631377007247,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0038368622992752594,
+          "step_mapped_token_fraction_all_analyzed": 0.4409637038434925,
+          "minimum_trajectory_fraction": 0.9545454545454546,
+          "passes_0_90_gate": true
+        },
+        "python_opaque": {
+          "all_analyzed": 21408,
+          "eligible": 13086,
+          "mapped": 13059,
+          "punctuation_only": 4332,
+          "whitespace_only": 3990,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9979367262723521,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0020632737276478678,
+          "step_mapped_token_fraction_all_analyzed": 0.6100056053811659,
+          "minimum_trajectory_fraction": 0.9767441860465116,
+          "passes_0_90_gate": true
+        }
+      },
+      "all_conditions_pass": true
+    },
+    "mistral": {
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "tokenizer_class": "TokenizersBackend",
+      "tokenizer_size": 32768,
+      "conditions": {
+        "procedural_prose": {
+          "all_analyzed": 21443,
+          "eligible": 13192,
+          "mapped": 13072,
+          "punctuation_only": 5215,
+          "whitespace_only": 3036,
+          "unmapped": 120,
+          "step_mapped_token_fraction": 0.9909035779260158,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.009096422073984234,
+          "step_mapped_token_fraction_all_analyzed": 0.6096161917642121,
+          "minimum_trajectory_fraction": 0.875,
+          "passes_0_90_gate": true
+        },
+        "controlled_nl": {
+          "all_analyzed": 19183,
+          "eligible": 11214,
+          "mapped": 11154,
+          "punctuation_only": 4933,
+          "whitespace_only": 3036,
+          "unmapped": 60,
+          "step_mapped_token_fraction": 0.994649545211343,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.005350454788657036,
+          "step_mapped_token_fraction_all_analyzed": 0.581452327581713,
+          "minimum_trajectory_fraction": 0.9183673469387755,
+          "passes_0_90_gate": true
+        },
+        "pseudocode": {
+          "all_analyzed": 16776,
+          "eligible": 7984,
+          "mapped": 7924,
+          "punctuation_only": 5756,
+          "whitespace_only": 3036,
+          "unmapped": 60,
+          "step_mapped_token_fraction": 0.9924849699398798,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.00751503006012024,
+          "step_mapped_token_fraction_all_analyzed": 0.47234144015259893,
+          "minimum_trajectory_fraction": 0.8823529411764706,
+          "passes_0_90_gate": true
+        },
+        "python_canonical": {
+          "all_analyzed": 15936,
+          "eligible": 7064,
+          "mapped": 7037,
+          "punctuation_only": 4858,
+          "whitespace_only": 4014,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9961778029445073,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.0038221970554926385,
+          "step_mapped_token_fraction_all_analyzed": 0.4415788152610442,
+          "minimum_trajectory_fraction": 0.9545454545454546,
+          "passes_0_90_gate": true
+        },
+        "python_opaque": {
+          "all_analyzed": 21435,
+          "eligible": 13101,
+          "mapped": 13074,
+          "punctuation_only": 4320,
+          "whitespace_only": 4014,
+          "unmapped": 27,
+          "step_mapped_token_fraction": 0.9979390886191893,
+          "boundary_overlap_token_fraction": 0.0,
+          "unmapped_token_fraction": 0.002060911380810625,
+          "step_mapped_token_fraction_all_analyzed": 0.6099370188943317,
+          "minimum_trajectory_fraction": 0.9767441860465116,
+          "passes_0_90_gate": true
+        }
+      },
+      "all_conditions_pass": true
+    }
+  },
+  "report_content_sha256": "ac7920896a439e20c5d1a6c23b09a7e41d7728d6ddf400aec06a583afea2b007"
+}

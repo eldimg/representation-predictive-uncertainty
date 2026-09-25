@@ -1,0 +1,16 @@
+.venv/
+.venv_*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/
+*.iml
+.env
+.env.*
+*.zip
+*.7z
+*.tar
+*.gz
+**/tokens.csv
+dist/

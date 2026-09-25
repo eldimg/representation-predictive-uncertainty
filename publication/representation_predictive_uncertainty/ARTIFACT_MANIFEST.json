@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "package": "representation-predictive-uncertainty",
+  "purpose": "inventory for the separate immutable Paper 1 evidence archive",
+  "source_commit": "c5608c527f0d86f40376c2fd45308c9f613e3feb",
+  "generated_at_utc": "2026-09-24T11:07:00.475600+00:00",
+  "artifact_count": 45,
+  "missing_count": 0,
+  "missing": [],
+  "total_size_bytes": 809489287,
+  "artifacts": [
+    {
+      "path": "experiment6_direct_logits/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/config.json",
+      "size_bytes": 1413,
+      "sha256": "905e2d542f4c4eb8dd27ca30f9279f6279bf65eb41520a53befe4e2881b659f5"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/tokens.csv",
+      "size_bytes": 60891110,
+      "sha256": "424b7430890fc62ebdd12d77314ca627e7b3e2eb91564cff8b2bef27d612e18e"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/trajectories.csv",
+      "size_bytes": 404215,
+      "sha256": "0bc6922783c5dca9a0dd4860345c3d810ad7c66085cb00d537c77dfd22bfe691"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/task_deltas.csv",
+      "size_bytes": 22631,
+      "sha256": "e175cdba2bcb2a082c9509b9b924b59829938408175f5661b3f750f841d54e1b"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/analysis_summary.json",
+      "size_bytes": 1290,
+      "sha256": "5200fd0a90107bbb61aa6978a6af78251dddb25aad44bc115bfcf79c73137051"
+    },
+    {
+      "path": "experiment7_cross_model/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/config.json",
+      "size_bytes": 1720,
+      "sha256": "4d7cd73938cc57aecb09880c4559a878ad47c5041a487dd95ca705ca46a8a2b3"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/tokens.csv",
+      "size_bytes": 69962740,
+      "sha256": "f2e9fdc558f9c36b8e87fbb59cacbb317e189c631f4c06ad81aab2b36d3f7830"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/trajectories.csv",
+      "size_bytes": 411140,
+      "sha256": "fb84ec096cc997a5924d747a4aefafd78852994ef07f721b693dec086d6afada"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/task_deltas.csv",
+      "size_bytes": 22446,
+      "sha256": "bcd1448138e56612c486f87a8c95b796b8d643a0c0a65154f6a92ed22e09fa3d"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/family_deltas.csv",
+      "size_bytes": 2727,
+      "sha256": "275fd016f46193fd845a9e928c0238a0d83acb52e8b78a62508e9d9826d60f27"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/analysis_summary.json",
+      "size_bytes": 2775,
+      "sha256": "c4cdbf75debe4f4f33e771fd34006827f96c767924505063c4c257e5d53502ac"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/config.json",
+      "size_bytes": 1728,
+      "sha256": "c436b2470df82f35f7f6a2cd40b8cc78eee76270f7086b32aaf4a7afeb9230af"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/tokens.csv",
+      "size_bytes": 69963663,
+      "sha256": "9e4d2c09c304367dc81b52c6eb65517d3afb31bcadf0a03e0c69c9cea50ba982"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/trajectories.csv",
+      "size_bytes": 409754,
+      "sha256": "0f1c597f8727fb602ac7f1708363343fc539016fdc0f83755b54b6dff693e2b2"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/task_deltas.csv",
+      "size_bytes": 22429,
+      "sha256": "30afc33f7a324744a009af13b89ba9566966fb22a2c002dac2520f536a54e8dd"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/family_deltas.csv",
+      "size_bytes": 2718,
+      "sha256": "fdf69b6b8131f80dbfbbb37acff80fc32a6a7bf7418fc1564954306a43eced79"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/analysis_summary.json",
+      "size_bytes": 2788,
+      "sha256": "4d2917369c456a3c8c0dc04f3e90d529e8348d1a24555695bc5eaae4700e540a"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment8_causal_decomposition/model_registry.json",
+      "size_bytes": 827,
+      "sha256": "abab4e9715b0ffdc864c5a077a5a6ce352211148980459e1a008c2cd10cbca48"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/procedure_ir.json",
+      "size_bytes": 8119053,
+      "sha256": "ae6214ef102ef7188d3959ce14b9e8e3439b70561eca6438d634fda2adcd9bb3"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/rendered_stimuli.json",
+      "size_bytes": 10351328,
+      "sha256": "0fcc7c0b54f9608c174a75c404344ae01af229ba7c31c5e3f18972b8fb2bbe1e"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/trajectory_order.json",
+      "size_bytes": 74499,
+      "sha256": "23ab145490b6f4a4d63b04fbcf82e24b6078c15810ed1985b8791f29a88dbab5"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/validation_report.json",
+      "size_bytes": 13087,
+      "sha256": "f77109f0e7159d28529498e87f4e9b0d802fdfca0b6948546235dc7712c391cb"
+    },
+    {
+      "path": "experiment8_causal_decomposition/analysis/RESULTS_SUMMARY_RU.md",
+      "size_bytes": 4327,
+      "sha256": "facca99809d7a98712940e78ac6bc0fb8facf63c02fd718f9c3140512905e031"
+    },
+    {
+      "path": "experiment8_causal_decomposition/analysis/cross_model_summary.json",
+      "size_bytes": 2000,
+      "sha256": "dd2de9326de5b06054cdef979f134a6a62d9c4b35360b07618d631c37d501e18"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/config.json",
+      "size_bytes": 1451,
+      "sha256": "43051de6d19d5a51dcc59630c044d944ca4b573e3e9d155c4de7e3562a0263dc"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/tokens.csv",
+      "size_bytes": 171223971,
+      "sha256": "721476a80da9906840ce9d037d3e624b0007b548e4c717a09afe053e2b586e08"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/trajectories.csv",
+      "size_bytes": 1128855,
+      "sha256": "b4fe8aa6040a8d46db66659a196c3dcf3ab7ea2308fc267d133a336f7217439f"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/task_contrasts.csv",
+      "size_bytes": 49729,
+      "sha256": "30a40c4fd780a809110177b79b501e05e45e508f810df9b32190020bee9c570f"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/family_contrasts.csv",
+      "size_bytes": 21574,
+      "sha256": "991bd04e19ffacadd39ac81e0fba345ff1ead4508b681e79104df24b54f13b62"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/analysis_summary.json",
+      "size_bytes": 8259,
+      "sha256": "e0f7d756adc595fbed35d4c06ea711bd7ac95ed5547a6bc49acb8f6ae7e0e35a"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/config.json",
+      "size_bytes": 1469,
+      "sha256": "0d517be1b22c62407f168ff189f5cdaa193ec25f631a884d1b73f3a1f1ca61cf"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/tokens.csv",
+      "size_bytes": 207846409,
+      "sha256": "ea0316dcf5a48d83ad349cb2859d8ee0f47a75e2918e739fda8e1ce855016b3d"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/trajectories.csv",
+      "size_bytes": 1125762,
+      "sha256": "8a900b316e0c1a140a210957e37040b8f0f108fa0c770016ebe3c4301b6c4962"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/task_contrasts.csv",
+      "size_bytes": 49679,
+      "sha256": "e7a708a4a138677972d446f18a61f06474d8931d2ae79a313c58d33e722cdde1"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/family_contrasts.csv",
+      "size_bytes": 21514,
+      "sha256": "c8eba84700977b96f9a0d56f465cdf049cacbb0031d2e1d9b07fc5ac8a9dc2ac"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/analysis_summary.json",
+      "size_bytes": 8293,
+      "sha256": "d8b017af2e77263c3ffa8b190d9772ef6df665bc505192b064d7a7cf39c43388"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/config.json",
+      "size_bytes": 1474,
+      "sha256": "fbe52faab655eae1176fa9ae6ef28a25b9b595e0be79be287205807433e20ec8"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/tokens.csv",
+      "size_bytes": 205710572,
+      "sha256": "6a9831b3f4f999e4ee6b81636c0556daf40fdd555e07c7861577aece42a4f946"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/trajectories.csv",
+      "size_bytes": 1124338,
+      "sha256": "4723c9b267fc7437353d67c3c57099248203514d8aff8c301e82f63c4afc288c"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/task_contrasts.csv",
+      "size_bytes": 49574,
+      "sha256": "664ef83280c67380ad9d9324766038f28c8470d320d08eb4f4ceb8fdf18ea405"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/family_contrasts.csv",
+      "size_bytes": 21488,
+      "sha256": "1b4b7c4abc1e6471c0edc8b562633a383c08506a3818ca80e481266ac0608cef"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/analysis_summary.json",
+      "size_bytes": 8304,
+      "sha256": "ee6faa3280e7eaacb4e5e3ea075ab8f83eee7cb5a3bcc10547d677798159fa54"
+    }
+  ],
+  "caution": "The token-level evidence is not included in the Git project. This manifest verifies the local source snapshot but is not a DOI or an independent public timestamp."
+}

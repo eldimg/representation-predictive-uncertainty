@@ -1,0 +1,209 @@
+{
+  "experiment": "Experiment 8 Sequential Representational Interventions",
+  "kind": "pre-run implementation manifest",
+  "generated_at_utc": "2026-09-16T13:34:19.521261+00:00",
+  "real_model_results_included": false,
+  "file_count": 40,
+  "files": [
+    {
+      "path": "CONSISTENCY_AUDIT.md",
+      "size_bytes": 14981,
+      "sha256": "da46f040e56a677bc18193a3fd68ffab2acc8f06cad7f8bf0b4054ec81289413"
+    },
+    {
+      "path": "DESIGN.md",
+      "size_bytes": 24670,
+      "sha256": "7c31cad79f8c806c5eed176955b4698a14909eeb409da7da174f9f4abf5e8ffd"
+    },
+    {
+      "path": "IMPLEMENTATION_REPORT.md",
+      "size_bytes": 3705,
+      "sha256": "02813e0b646483591e832892a3580a0e9bdab5fc2754bb65ec9afe46b2389332"
+    },
+    {
+      "path": "PREREGISTRATION.md",
+      "size_bytes": 11653,
+      "sha256": "da932afc6e000303aec159c3531402a291332bd241fbdf896adeda8a6061996e"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 816,
+      "sha256": "8aef77c3e1f1aea3d725e58b4bceda18a0ef79aecd40bcaf78cdac72efba99c8"
+    },
+    {
+      "path": "debug/smoke_mistral.json",
+      "size_bytes": 28252,
+      "sha256": "c3dde7b9f052ab4f2a7ef1d7e5534b73cf8e5add48069f1ce4f6ed7c36a4a35a"
+    },
+    {
+      "path": "debug/smoke_phi3.json",
+      "size_bytes": 28287,
+      "sha256": "a0351f5acc681f61bf3aac2b792d46533fcefaa15f5e846786d96b60e82e46ba"
+    },
+    {
+      "path": "debug/smoke_qwen3.json",
+      "size_bytes": 28152,
+      "sha256": "9145f511aa9eb107cb0824f5f949f4d0e55053c0c1e05de9e405e229b1bbca45"
+    },
+    {
+      "path": "debug/synthetic_tasks.json",
+      "size_bytes": 1159,
+      "sha256": "6ce059924ac6f53eeee6c35c93b26b1da6c2b780c8542d1aa0a286efdbd7cf19"
+    },
+    {
+      "path": "model_registry.json",
+      "size_bytes": 827,
+      "sha256": "abab4e9715b0ffdc864c5a077a5a6ce352211148980459e1a008c2cd10cbca48"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 91,
+      "sha256": "6ad7d00ea79236790b79bcadf90747e14f7694d06a9c7811f87cc3c4fedc7964"
+    },
+    {
+      "path": "src/__init__.py",
+      "size_bytes": 55,
+      "sha256": "42111a4b86d84f22200273385db9f8efdee0ef569f41b760e6ead710cc843406"
+    },
+    {
+      "path": "src/analyze_model.py",
+      "size_bytes": 12979,
+      "sha256": "92e67d24fdd5770c623741116617e6023cd09fda5ca1918517d23a9ec2f2b478"
+    },
+    {
+      "path": "src/build_ir.py",
+      "size_bytes": 2363,
+      "sha256": "3f64d8678d794364ddb95ddb2ae6e6540aa8cf0d8a4e499c7e7cf96aa577c4ea"
+    },
+    {
+      "path": "src/common.py",
+      "size_bytes": 4469,
+      "sha256": "f2607e0943ea1017459d6e94ca8dff870a093b2fa6301baecad728900f825252"
+    },
+    {
+      "path": "src/compare_models.py",
+      "size_bytes": 2963,
+      "sha256": "47a2e09c7a86ea346eb2bd8dccbf56d3c3fa47066f1bee005f73ad815cd90090"
+    },
+    {
+      "path": "src/create_manifest.py",
+      "size_bytes": 1560,
+      "sha256": "fd4fe962a38c7709a27abd1e75842f92d980de2757fcb515f0e297bf45416a8c"
+    },
+    {
+      "path": "src/differential.py",
+      "size_bytes": 7362,
+      "sha256": "387de60e27423947fc4332da1923dd77ade6c1ad28a431f702b91ea481bd54e9"
+    },
+    {
+      "path": "src/ir.py",
+      "size_bytes": 7130,
+      "sha256": "262b4e5dc2d3eed6da8257fc12549ca898cba358bdf6ec772a6cf54a2279e896"
+    },
+    {
+      "path": "src/opaque_renamer.py",
+      "size_bytes": 8324,
+      "sha256": "5476d2cba92048cd74abb5410900bfa86c1e7f622b3d6bcec4426c34e804b88c"
+    },
+    {
+      "path": "src/renderers.py",
+      "size_bytes": 20775,
+      "sha256": "9a3a0fa79cbdc488e16a2ed909d36f8dea328466518ebed567bfadc683f2e1b6"
+    },
+    {
+      "path": "src/run_experiment8.py",
+      "size_bytes": 20014,
+      "sha256": "f05b491ad706eefdc5e82a95c7837351763d7f3a9b66a6dc9a2da9d041d4b79f"
+    },
+    {
+      "path": "src/smoke_synthetic.py",
+      "size_bytes": 3948,
+      "sha256": "a79f72582a70644e7cbd84b1fb1b47c4f909c1630a17be2f8410baaecdaf3507"
+    },
+    {
+      "path": "src/validate_stimuli.py",
+      "size_bytes": 17176,
+      "sha256": "e0f2188fdefc62981819517da908a0cafb198701020ead2524c324a844f85aa0"
+    },
+    {
+      "path": "stimuli/audit_sample.csv",
+      "size_bytes": 227575,
+      "sha256": "7985105006d457b12b7c3297161aed470d19910e4db3f27bbfafeb7fe1a18d4b"
+    },
+    {
+      "path": "stimuli/procedure_ir.json",
+      "size_bytes": 8119053,
+      "sha256": "ae6214ef102ef7188d3959ce14b9e8e3439b70561eca6438d634fda2adcd9bb3"
+    },
+    {
+      "path": "stimuli/rendered_stimuli.json",
+      "size_bytes": 10351328,
+      "sha256": "0fcc7c0b54f9608c174a75c404344ae01af229ba7c31c5e3f18972b8fb2bbe1e"
+    },
+    {
+      "path": "stimuli/trajectory_order.json",
+      "size_bytes": 74499,
+      "sha256": "23ab145490b6f4a4d63b04fbcf82e24b6078c15810ed1985b8791f29a88dbab5"
+    },
+    {
+      "path": "stimuli/validation_report.json",
+      "size_bytes": 13087,
+      "sha256": "f77109f0e7159d28529498e87f4e9b0d802fdfca0b6948546235dc7712c391cb"
+    },
+    {
+      "path": "tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "tests/_support.py",
+      "size_bytes": 198,
+      "sha256": "18428c8ec29def69ac66fdbe51cbcb8833b7fee536d6f0e1d0494d961271a614"
+    },
+    {
+      "path": "tests/test_checkpoint_resume.py",
+      "size_bytes": 1571,
+      "sha256": "592f704e41c5fc05db334960733f4782875770bda122ac3ec7f4479d9e546861"
+    },
+    {
+      "path": "tests/test_differential_execution.py",
+      "size_bytes": 786,
+      "sha256": "c8225e4a3d4cf335fbe178050bb7bfe1bb15fb4e0b832888cbfbd9e7723ac016"
+    },
+    {
+      "path": "tests/test_ir.py",
+      "size_bytes": 1933,
+      "sha256": "fdc0ce1d34a63cbd05e97dc88ddc43261b8afe0770c45911ecc7b5b565f4cc7e"
+    },
+    {
+      "path": "tests/test_opaque_python.py",
+      "size_bytes": 2332,
+      "sha256": "5ec5cdd6a9a7d9810768da7d11b443af8b55c25bf82294ee127276f933f09249"
+    },
+    {
+      "path": "tests/test_renderers.py",
+      "size_bytes": 2384,
+      "sha256": "87b025483c1668e0a0a418de6a7af4cd256abe059e6d9bfc388f86e6f15d022a"
+    },
+    {
+      "path": "tests/test_semantic_step_mapping.py",
+      "size_bytes": 1004,
+      "sha256": "6d6b1e45daa37e658e25309630d3b8dad620787a514ca750c523ac0a19fd8e0c"
+    },
+    {
+      "path": "tests/test_statistics.py",
+      "size_bytes": 3660,
+      "sha256": "28104b812559c9dddd904f595a4839a7eae8292afde92b41894ff80688c6f0a8"
+    },
+    {
+      "path": "tests/test_synthetic_smoke.py",
+      "size_bytes": 901,
+      "sha256": "99a0ff1b2872abff3b0f511da13242b1324d2ecddb0e6b0b33cce547494daeca"
+    },
+    {
+      "path": "tests/test_token_alignment.py",
+      "size_bytes": 816,
+      "sha256": "517671f02b9879c6fb799d293d9e1c099e9c6b7888c897573306e15faa92c3df"
+    }
+  ]
+}

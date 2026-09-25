@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "project_name": "representation-predictive-uncertainty",
+  "package_kind": "standalone Git/code and compact-data release",
+  "source_commit": "fc89d907ddbfc324e220a082a87ffc8808268a5d",
+  "generated_at_utc": "2026-09-25T09:14:42.074662+00:00",
+  "file_count": 119,
+  "total_size_bytes": 25023104,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size_bytes": 45,
+      "sha256": "7303cbc84bf294f0b90cc2a1eeff459ae2b958472fc8f729b9659241dfb4fac6"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 130,
+      "sha256": "52a85a9cfbb0f6b8708daed8960807f68bfb7699899ca212e39d0fefe7062a28"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 1290,
+      "sha256": "1d44d0edf52d10022b2c4d49ed579e01b273f672b62f093e5fb7c6e276e55f6d"
+    },
+    {
+      "path": "DATASET_CARD.md",
+      "size_bytes": 11656,
+      "sha256": "8d0a9838dab319b76088ca703338f5e2e685b00a45a6eba4917526785b45ac2c"
+    },
+    {
+      "path": "EVIDENCE_MANIFEST.json",
+      "size_bytes": 9554,
+      "sha256": "c8de061b32bbcc3b3171517259b25fe46b3a0634a56e5e96e7f2a78e8e809395"
+    },
+    {
+      "path": "experiment6_confirmatory/PREREGISTRATION.md",
+      "size_bytes": 3717,
+      "sha256": "eceab75e6b044382a3e0b4fb1618b80d32f4f2b7cb626d58a46038486bb5767e"
+    },
+    {
+      "path": "experiment6_confirmatory/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment6_confirmatory/validate_tasks.py",
+      "size_bytes": 1208,
+      "sha256": "076107e29daba5e3578227d352067b7a3ad77a2ce2fe061ad7ace61accaabf42"
+    },
+    {
+      "path": "experiment6_direct_logits/analyze_direct_hf.py",
+      "size_bytes": 4236,
+      "sha256": "c9d5413ee6347555804b7be8c13597d36162550c2d8c3b71d0c11cca724f02a1"
+    },
+    {
+      "path": "experiment6_direct_logits/analyze_direct_numpy.py",
+      "size_bytes": 6513,
+      "sha256": "b48ae1d654e123d0dda017ad02e266dc7be0257ea817c1bca0388e0f7d9a85fe"
+    },
+    {
+      "path": "experiment6_direct_logits/README_DIRECT.md",
+      "size_bytes": 3740,
+      "sha256": "ee3812502939b0bf16d67807dd3d9605bdcc4b891d7f6b25e60eeba89c5df48b"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/analysis_summary.json",
+      "size_bytes": 1252,
+      "sha256": "e8a581e1eb634fe29466cafb6c40154c6993de17ab2c01e90ea49c0e63372eb3"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/config.json",
+      "size_bytes": 1321,
+      "sha256": "0d2d4ccacf8c44b6bf60602abcea3995b005af63f2a93b68d074637f6e6b0e66"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/task_deltas.csv",
+      "size_bytes": 22631,
+      "sha256": "e175cdba2bcb2a082c9509b9b924b59829938408175f5661b3f750f841d54e1b"
+    },
+    {
+      "path": "experiment6_direct_logits/results_direct_hf/trajectories.csv",
+      "size_bytes": 404215,
+      "sha256": "0bc6922783c5dca9a0dd4860345c3d810ad7c66085cb00d537c77dfd22bfe691"
+    },
+    {
+      "path": "experiment6_direct_logits/run_direct_hf.py",
+      "size_bytes": 22064,
+      "sha256": "f49fb96cc45c801c79324c43782a5b3be5d5b91edbedab94f1e8e3cc031ccfd2"
+    },
+    {
+      "path": "experiment6_direct_logits/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment6_direct_logits/verify_direct_env.py",
+      "size_bytes": 473,
+      "sha256": "08bc0b182812c17775f8a2a78192f83046f6ad2007327902372f2d2ebdf93fcf"
+    },
+    {
+      "path": "experiment7_cross_model/analyze_model.py",
+      "size_bytes": 7567,
+      "sha256": "fd7dffe5d5118fc10f910cfa006d3134ef71a78b7034e1a64ceaac092a3374b2"
+    },
+    {
+      "path": "experiment7_cross_model/baseline_qwen_exp6_config.json",
+      "size_bytes": 1321,
+      "sha256": "0d2d4ccacf8c44b6bf60602abcea3995b005af63f2a93b68d074637f6e6b0e66"
+    },
+    {
+      "path": "experiment7_cross_model/baseline_qwen_exp6_summary.json",
+      "size_bytes": 1252,
+      "sha256": "e8a581e1eb634fe29466cafb6c40154c6993de17ab2c01e90ea49c0e63372eb3"
+    },
+    {
+      "path": "experiment7_cross_model/compare_models.py",
+      "size_bytes": 3367,
+      "sha256": "ddd8cde5431e4844736deafe9e9b3f8541d6e73e5ca96782fd28a7652c5e0805"
+    },
+    {
+      "path": "experiment7_cross_model/EXPERIMENT_7_PROTOCOL.md",
+      "size_bytes": 2321,
+      "sha256": "38be16b83111906c730d9dfc0b42d1ce4bdb08ab910a43d5e19b1d7c3c89fa27"
+    },
+    {
+      "path": "experiment7_cross_model/install_env_windows.ps1",
+      "size_bytes": 410,
+      "sha256": "965c028d29c76e1aa3cfc069a01b2a1df2645fee021a5887e1179bfad9e8c5b2"
+    },
+    {
+      "path": "experiment7_cross_model/README.md",
+      "size_bytes": 2871,
+      "sha256": "d12ede3aedb5ec4f5156a9e5fbf4da0509cd895f292ad084cf29c8e7ccc31f7b"
+    },
+    {
+      "path": "experiment7_cross_model/requirements_no_torch.txt",
+      "size_bytes": 147,
+      "sha256": "c8e5040a2551f04ca36574ff6d5b6738fd975151586536131268e25b5c89f887"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/analysis_summary.json",
+      "size_bytes": 2708,
+      "sha256": "1b65f1c91e8dc0dd2fcd3d35daeb593bfdf6fc8b5746791c504bb45bd562da3b"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/config.json",
+      "size_bytes": 1692,
+      "sha256": "0b2bc075637df61998f9a65387ac292ecdd4ba2669a9d69051d2c95dff3f1dc7"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/family_deltas.csv",
+      "size_bytes": 2718,
+      "sha256": "fdf69b6b8131f80dbfbbb37acff80fc32a6a7bf7418fc1564954306a43eced79"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/task_deltas.csv",
+      "size_bytes": 22429,
+      "sha256": "30afc33f7a324744a009af13b89ba9566966fb22a2c002dac2520f536a54e8dd"
+    },
+    {
+      "path": "experiment7_cross_model/results/mistral/trajectories.csv",
+      "size_bytes": 409754,
+      "sha256": "0f1c597f8727fb602ac7f1708363343fc539016fdc0f83755b54b6dff693e2b2"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/analysis_summary.json",
+      "size_bytes": 2695,
+      "sha256": "241b0c0f303ded0e9e71f92f7284611394f2b8e75b27ad7fb8ff521bb07c3016"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/config.json",
+      "size_bytes": 1684,
+      "sha256": "01eacf61f9dfd0724ee75c55567301c347d3c3285216126fa05000c4bdbded57"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/family_deltas.csv",
+      "size_bytes": 2727,
+      "sha256": "275fd016f46193fd845a9e928c0238a0d83acb52e8b78a62508e9d9826d60f27"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/task_deltas.csv",
+      "size_bytes": 22446,
+      "sha256": "bcd1448138e56612c486f87a8c95b796b8d643a0c0a65154f6a92ed22e09fa3d"
+    },
+    {
+      "path": "experiment7_cross_model/results/phi3/trajectories.csv",
+      "size_bytes": 411140,
+      "sha256": "fb84ec096cc997a5924d747a4aefafd78852994ef07f721b693dec086d6afada"
+    },
+    {
+      "path": "experiment7_cross_model/run_cross_model.py",
+      "size_bytes": 25060,
+      "sha256": "c26ba6b4bfe7794a7867430976ba1557e9d9bc8a2fc5f56ea964375cb96f6160"
+    },
+    {
+      "path": "experiment7_cross_model/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment7_cross_model/validate_frozen_stimuli.py",
+      "size_bytes": 777,
+      "sha256": "6a744a04f13da1446e4829673557d00a96ac720a8264e24fa5ee4bd13df75c2d"
+    },
+    {
+      "path": "experiment7_cross_model/verify_env.py",
+      "size_bytes": 473,
+      "sha256": "08bc0b182812c17775f8a2a78192f83046f6ad2007327902372f2d2ebdf93fcf"
+    },
+    {
+      "path": "experiment8_causal_decomposition/analysis/cross_model_summary.json",
+      "size_bytes": 2000,
+      "sha256": "dd2de9326de5b06054cdef979f134a6a62d9c4b35360b07618d631c37d501e18"
+    },
+    {
+      "path": "experiment8_causal_decomposition/analysis/RESULTS_SUMMARY_RU.md",
+      "size_bytes": 4327,
+      "sha256": "facca99809d7a98712940e78ac6bc0fb8facf63c02fd718f9c3140512905e031"
+    },
+    {
+      "path": "experiment8_causal_decomposition/CONSISTENCY_AUDIT.md",
+      "size_bytes": 14981,
+      "sha256": "da46f040e56a677bc18193a3fd68ffab2acc8f06cad7f8bf0b4054ec81289413"
+    },
+    {
+      "path": "experiment8_causal_decomposition/DESIGN.md",
+      "size_bytes": 24670,
+      "sha256": "7c31cad79f8c806c5eed176955b4698a14909eeb409da7da174f9f4abf5e8ffd"
+    },
+    {
+      "path": "experiment8_causal_decomposition/IMPLEMENTATION_REPORT.md",
+      "size_bytes": 3705,
+      "sha256": "02813e0b646483591e832892a3580a0e9bdab5fc2754bb65ec9afe46b2389332"
+    },
+    {
+      "path": "experiment8_causal_decomposition/MANIFEST.json",
+      "size_bytes": 6730,
+      "sha256": "e3927b960e6567a19af90a5c127ad4ab1f005d2d340634e097d38efc1a50124e"
+    },
+    {
+      "path": "experiment8_causal_decomposition/model_registry.json",
+      "size_bytes": 827,
+      "sha256": "abab4e9715b0ffdc864c5a077a5a6ce352211148980459e1a008c2cd10cbca48"
+    },
+    {
+      "path": "experiment8_causal_decomposition/PREREGISTRATION.md",
+      "size_bytes": 11653,
+      "sha256": "da932afc6e000303aec159c3531402a291332bd241fbdf896adeda8a6061996e"
+    },
+    {
+      "path": "experiment8_causal_decomposition/README.md",
+      "size_bytes": 1927,
+      "sha256": "acf6d240d414cfdc1dc0200ba3407f78492fed9e98b22ffe14c47e70cebb44d2"
+    },
+    {
+      "path": "experiment8_causal_decomposition/requirements.txt",
+      "size_bytes": 91,
+      "sha256": "6ad7d00ea79236790b79bcadf90747e14f7694d06a9c7811f87cc3c4fedc7964"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/analysis_summary.json",
+      "size_bytes": 8304,
+      "sha256": "ee6faa3280e7eaacb4e5e3ea075ab8f83eee7cb5a3bcc10547d677798159fa54"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/config.json",
+      "size_bytes": 1474,
+      "sha256": "fbe52faab655eae1176fa9ae6ef28a25b9b595e0be79be287205807433e20ec8"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/family_contrasts.csv",
+      "size_bytes": 21488,
+      "sha256": "1b4b7c4abc1e6471c0edc8b562633a383c08506a3818ca80e481266ac0608cef"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/task_contrasts.csv",
+      "size_bytes": 49574,
+      "sha256": "664ef83280c67380ad9d9324766038f28c8470d320d08eb4f4ceb8fdf18ea405"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/mistral/trajectories.csv",
+      "size_bytes": 1124338,
+      "sha256": "4723c9b267fc7437353d67c3c57099248203514d8aff8c301e82f63c4afc288c"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/analysis_summary.json",
+      "size_bytes": 8293,
+      "sha256": "d8b017af2e77263c3ffa8b190d9772ef6df665bc505192b064d7a7cf39c43388"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/config.json",
+      "size_bytes": 1469,
+      "sha256": "0d517be1b22c62407f168ff189f5cdaa193ec25f631a884d1b73f3a1f1ca61cf"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/family_contrasts.csv",
+      "size_bytes": 21514,
+      "sha256": "c8eba84700977b96f9a0d56f465cdf049cacbb0031d2e1d9b07fc5ac8a9dc2ac"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/task_contrasts.csv",
+      "size_bytes": 49679,
+      "sha256": "e7a708a4a138677972d446f18a61f06474d8931d2ae79a313c58d33e722cdde1"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/phi3/trajectories.csv",
+      "size_bytes": 1125762,
+      "sha256": "8a900b316e0c1a140a210957e37040b8f0f108fa0c770016ebe3c4301b6c4962"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/analysis_summary.json",
+      "size_bytes": 8259,
+      "sha256": "e0f7d756adc595fbed35d4c06ea711bd7ac95ed5547a6bc49acb8f6ae7e0e35a"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/config.json",
+      "size_bytes": 1451,
+      "sha256": "43051de6d19d5a51dcc59630c044d944ca4b573e3e9d155c4de7e3562a0263dc"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/family_contrasts.csv",
+      "size_bytes": 21574,
+      "sha256": "991bd04e19ffacadd39ac81e0fba345ff1ead4508b681e79104df24b54f13b62"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/task_contrasts.csv",
+      "size_bytes": 49729,
+      "sha256": "30a40c4fd780a809110177b79b501e05e45e508f810df9b32190020bee9c570f"
+    },
+    {
+      "path": "experiment8_causal_decomposition/results/qwen3/trajectories.csv",
+      "size_bytes": 1128855,
+      "sha256": "b4fe8aa6040a8d46db66659a196c3dcf3ab7ea2308fc267d133a336f7217439f"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/__init__.py",
+      "size_bytes": 55,
+      "sha256": "42111a4b86d84f22200273385db9f8efdee0ef569f41b760e6ead710cc843406"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/analyze_model.py",
+      "size_bytes": 12979,
+      "sha256": "92e67d24fdd5770c623741116617e6023cd09fda5ca1918517d23a9ec2f2b478"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/build_ir.py",
+      "size_bytes": 2363,
+      "sha256": "3f64d8678d794364ddb95ddb2ae6e6540aa8cf0d8a4e499c7e7cf96aa577c4ea"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/common.py",
+      "size_bytes": 4469,
+      "sha256": "f2607e0943ea1017459d6e94ca8dff870a093b2fa6301baecad728900f825252"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/compare_models.py",
+      "size_bytes": 2963,
+      "sha256": "47a2e09c7a86ea346eb2bd8dccbf56d3c3fa47066f1bee005f73ad815cd90090"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/create_manifest.py",
+      "size_bytes": 1560,
+      "sha256": "fd4fe962a38c7709a27abd1e75842f92d980de2757fcb515f0e297bf45416a8c"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/differential.py",
+      "size_bytes": 7362,
+      "sha256": "387de60e27423947fc4332da1923dd77ade6c1ad28a431f702b91ea481bd54e9"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/ir.py",
+      "size_bytes": 7130,
+      "sha256": "262b4e5dc2d3eed6da8257fc12549ca898cba358bdf6ec772a6cf54a2279e896"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/opaque_renamer.py",
+      "size_bytes": 8324,
+      "sha256": "5476d2cba92048cd74abb5410900bfa86c1e7f622b3d6bcec4426c34e804b88c"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/renderers.py",
+      "size_bytes": 20775,
+      "sha256": "9a3a0fa79cbdc488e16a2ed909d36f8dea328466518ebed567bfadc683f2e1b6"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/run_experiment8.py",
+      "size_bytes": 20014,
+      "sha256": "f05b491ad706eefdc5e82a95c7837351763d7f3a9b66a6dc9a2da9d041d4b79f"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/smoke_synthetic.py",
+      "size_bytes": 3948,
+      "sha256": "a79f72582a70644e7cbd84b1fb1b47c4f909c1630a17be2f8410baaecdaf3507"
+    },
+    {
+      "path": "experiment8_causal_decomposition/src/validate_stimuli.py",
+      "size_bytes": 17176,
+      "sha256": "e0f2188fdefc62981819517da908a0cafb198701020ead2524c324a844f85aa0"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/audit_sample.csv",
+      "size_bytes": 227575,
+      "sha256": "7985105006d457b12b7c3297161aed470d19910e4db3f27bbfafeb7fe1a18d4b"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/procedure_ir.json",
+      "size_bytes": 8119053,
+      "sha256": "ae6214ef102ef7188d3959ce14b9e8e3439b70561eca6438d634fda2adcd9bb3"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/rendered_stimuli.json",
+      "size_bytes": 10351328,
+      "sha256": "0fcc7c0b54f9608c174a75c404344ae01af229ba7c31c5e3f18972b8fb2bbe1e"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/trajectory_order.json",
+      "size_bytes": 74499,
+      "sha256": "23ab145490b6f4a4d63b04fbcf82e24b6078c15810ed1985b8791f29a88dbab5"
+    },
+    {
+      "path": "experiment8_causal_decomposition/stimuli/validation_report.json",
+      "size_bytes": 13087,
+      "sha256": "f77109f0e7159d28529498e87f4e9b0d802fdfca0b6948546235dc7712c391cb"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tasks.json",
+      "size_bytes": 131388,
+      "sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/_support.py",
+      "size_bytes": 198,
+      "sha256": "18428c8ec29def69ac66fdbe51cbcb8833b7fee536d6f0e1d0494d961271a614"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_checkpoint_resume.py",
+      "size_bytes": 1571,
+      "sha256": "592f704e41c5fc05db334960733f4782875770bda122ac3ec7f4479d9e546861"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_differential_execution.py",
+      "size_bytes": 786,
+      "sha256": "c8225e4a3d4cf335fbe178050bb7bfe1bb15fb4e0b832888cbfbd9e7723ac016"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_ir.py",
+      "size_bytes": 1933,
+      "sha256": "fdc0ce1d34a63cbd05e97dc88ddc43261b8afe0770c45911ecc7b5b565f4cc7e"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_opaque_python.py",
+      "size_bytes": 2332,
+      "sha256": "5ec5cdd6a9a7d9810768da7d11b443af8b55c25bf82294ee127276f933f09249"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_renderers.py",
+      "size_bytes": 2384,
+      "sha256": "87b025483c1668e0a0a418de6a7af4cd256abe059e6d9bfc388f86e6f15d022a"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_semantic_step_mapping.py",
+      "size_bytes": 1004,
+      "sha256": "6d6b1e45daa37e658e25309630d3b8dad620787a514ca750c523ac0a19fd8e0c"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_statistics.py",
+      "size_bytes": 3660,
+      "sha256": "28104b812559c9dddd904f595a4839a7eae8292afde92b41894ff80688c6f0a8"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_synthetic_smoke.py",
+      "size_bytes": 901,
+      "sha256": "99a0ff1b2872abff3b0f511da13242b1324d2ecddb0e6b0b33cce547494daeca"
+    },
+    {
+      "path": "experiment8_causal_decomposition/tests/test_token_alignment.py",
+      "size_bytes": 816,
+      "sha256": "517671f02b9879c6fb799d293d9e1c099e9c6b7888c897573306e15faa92c3df"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1063,
+      "sha256": "03cd0f09767070b0414cff63ed90125f64b538e1a10837154dd9d46df29e0a92"
+    },
+    {
+      "path": "LICENSE-DATA",
+      "size_bytes": 18656,
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/ARTIFACT_MANIFEST.json",
+      "size_bytes": 9554,
+      "sha256": "c8de061b32bbcc3b3171517259b25fe46b3a0634a56e5e96e7f2a78e8e809395"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/CORPUS_AUTHOR_DECLARATION_RU.md",
+      "size_bytes": 9695,
+      "sha256": "9f0d996fecc5f50a21715647bf75d1789700cf3d5517365bd079e4471d638e94"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/EVIDENCE_MATRIX.md",
+      "size_bytes": 4446,
+      "sha256": "1423a3a1cb17cfda505eba4d37fab1fdc6c2459b7ee00dd1b517c364eae4e78f"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/EXPERIMENT6_MODEL_PROVENANCE.md",
+      "size_bytes": 3663,
+      "sha256": "fcff3890c9cc93449a6c72fc5de11dca52149b7cf7f21c11b2e51d20e3108c1f"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/FIGURE_CAPTIONS.md",
+      "size_bytes": 4597,
+      "sha256": "e6178d0e9a48eb776571011278a60bbc95e83de2dbb7186be274f7466127f641"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/figure_1_replication_forest.png",
+      "size_bytes": 51480,
+      "sha256": "72bc10c64d325d740c3c8e82622c878a3bbdef06a715bc0f04111bac877e10a2"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/figure_2_condition_profile.png",
+      "size_bytes": 139569,
+      "sha256": "c91e1116a488950d5742c5753362b05977f874f976d7b4ebf92b25df9da97960"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/figure_3_intervention_forest.png",
+      "size_bytes": 96793,
+      "sha256": "75ceac58da8ea111d18c1ceb3f6317a0b3a3bae23b6b2c97b336d15c4495293b"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/figure_4_c4_equivalence.png",
+      "size_bytes": 53644,
+      "sha256": "41ec460dd426abfad59077bbdd5903802ff225285a01183d0b033b47a3abd499"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/table_1_replication.csv",
+      "size_bytes": 420,
+      "sha256": "d8d70661094383144c509316581ac1f86dabbad9d7c1ac057229312ba8370524"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/table_2_interventions.csv",
+      "size_bytes": 2256,
+      "sha256": "3d5ca2eb03a86bd69db58c55c2f2e42117128c49123d3435c94fbd95efe7fb43"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/table_3_condition_means.csv",
+      "size_bytes": 969,
+      "sha256": "605d7b85f5ac1fc8015a338b64d2cfb13de13664b5f67cc538fa613f1444f75c"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/generated/table_4_family_robustness.csv",
+      "size_bytes": 1007,
+      "sha256": "ab389e3ec310792b7c6f96fcb4c1463594c6103fb51ff3eb5160eabda76e839c"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/MANUSCRIPT_DRAFT_EN.md",
+      "size_bytes": 38348,
+      "sha256": "863ba440f3a4cad9553f2a51b3671ef865cf4109985c2f0779479ed05f06363e"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/references.bib",
+      "size_bytes": 6292,
+      "sha256": "e4072c119b1fdc3db887be1049e9b94af369ce5bc97ecfa5852232002ee89848"
+    },
+    {
+      "path": "publication/representation_predictive_uncertainty/requirements-analysis.txt",
+      "size_bytes": 39,
+      "sha256": "34f77c6f5ca04d190e460103b354b03965bcaa5207b62f91ef473f1cdc68ac2e"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4255,
+      "sha256": "91db151820c2373d7f443145e82c21a9f5a931aec78a90700a9231f7602b4155"
+    },
+    {
+      "path": "scripts/audit_manuscript_numbers.py",
+      "size_bytes": 6513,
+      "sha256": "e5e120c050d97fb95d85c968270bd22acc53505b059dcbd0bc7feea6458c06c2"
+    },
+    {
+      "path": "scripts/build_publication_outputs.py",
+      "size_bytes": 14279,
+      "sha256": "06e086161d69f8fe92c678f203c8b92615827ec142dee47c07c7730ee04a8cb9"
+    },
+    {
+      "path": "scripts/build_release_manifest.py",
+      "size_bytes": 1993,
+      "sha256": "8bcecd333bb661fa888281b2afb29cb87b29540e9fc2dd19ff62fb930fdc9b80"
+    },
+    {
+      "path": "scripts/rebuild_release.ps1",
+      "size_bytes": 780,
+      "sha256": "09bfbd64988c6393d2ade561241704812eb8063d8ac7bc9a6f54f53f817625b9"
+    },
+    {
+      "path": "scripts/validate_release.py",
+      "size_bytes": 4677,
+      "sha256": "ca982ff22e6263a45243c4037f77b1a642cbcc0c0b75167602d114412f89390e"
+    },
+    {
+      "path": "SOURCE_COMMIT.txt",
+      "size_bytes": 41,
+      "sha256": "eee2d723de6eb9eafa2802e7d4a946d984441ecb45b2feb98a8d55e65423ca02"
+    }
+  ]
+}

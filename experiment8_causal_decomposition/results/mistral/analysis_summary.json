@@ -1,0 +1,268 @@
+{
+  "experiment": "Experiment 8 Sequential Representational Interventions",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "model_slug": "mistral",
+  "model_commit_hash": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "n_trajectories": 1800,
+  "n_tasks": 100,
+  "n_families": 50,
+  "analysis_seed": 20260916,
+  "signflip_resamples": 200000,
+  "bootstrap_resamples": 100000,
+  "holm_family": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "contrasts": {
+    "C1": {
+      "left_condition": "procedural_prose",
+      "right_condition": "controlled_nl",
+      "alternative": "positive",
+      "primary_h20": {
+        "n": 100,
+        "mean": -0.005782633279139039,
+        "median": -0.0072008214078725374,
+        "sd": 0.10156301598964376,
+        "cohens_dz": -0.05693640763610925,
+        "positive": 49,
+        "negative": 51,
+        "zero": 0,
+        "positive_fraction": 0.49,
+        "exact_sign_p": 0.6178232827986666,
+        "signflip": {
+          "observed_mean": -0.005782633279139039,
+          "alternative": "greater",
+          "extreme_resamples": 143274,
+          "n_resamples": 200000,
+          "p_plus1": 0.7163714181429093
+        },
+        "bootstrap_99_ci": [
+          -0.03196684833444105,
+          0.019920315499778192
+        ],
+        "holm_adjusted_p": 0.7163714181429093
+      },
+      "valid_vocab_mean_delta": -0.10087143896025266,
+      "semantic_step_balanced_mean_delta": 0.04144572176022582,
+      "family_cluster_robustness": {
+        "n": 50,
+        "mean": -0.005782633279139039,
+        "median": -0.001480313548176182,
+        "sd": 0.09766971401221629,
+        "cohens_dz": -0.05920600195896715,
+        "positive": 25,
+        "negative": 25,
+        "zero": 0,
+        "positive_fraction": 0.5,
+        "exact_sign_p": 0.5561375863296085,
+        "signflip": {
+          "observed_mean": -0.005782633279139039,
+          "alternative": "greater",
+          "extreme_resamples": 132803,
+          "n_resamples": 200000,
+          "p_plus1": 0.6640166799166004
+        },
+        "bootstrap_99_ci": [
+          -0.04119985739444215,
+          0.028704399856202812
+        ],
+        "cluster_bootstrap_99_ci": [
+          -0.04119985739444215,
+          0.028704399856202812
+        ]
+      },
+      "primary_pass": false,
+      "result_status": "NOT SUPPORTED"
+    },
+    "C2": {
+      "left_condition": "controlled_nl",
+      "right_condition": "pseudocode",
+      "alternative": "positive",
+      "primary_h20": {
+        "n": 100,
+        "mean": 0.09683701669778846,
+        "median": 0.0971599027676987,
+        "sd": 0.0660866526621653,
+        "cohens_dz": 1.4653037004736629,
+        "positive": 96,
+        "negative": 4,
+        "zero": 0,
+        "positive_fraction": 0.96,
+        "exact_sign_p": 3.224844447881771e-24,
+        "signflip": {
+          "observed_mean": 0.09683701669778846,
+          "alternative": "greater",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.07979852152984387,
+          0.1139272649002406
+        ],
+        "holm_adjusted_p": 1.9999900000499998e-05
+      },
+      "valid_vocab_mean_delta": 0.14504444147120676,
+      "semantic_step_balanced_mean_delta": 0.06908565182603293,
+      "family_cluster_robustness": {
+        "n": 50,
+        "mean": 0.09683701669778849,
+        "median": 0.0973377572234643,
+        "sd": 0.06128037360883388,
+        "cohens_dz": 1.5802288888759148,
+        "positive": 49,
+        "negative": 1,
+        "zero": 0,
+        "positive_fraction": 0.98,
+        "exact_sign_p": 4.529709940470639e-14,
+        "signflip": {
+          "observed_mean": 0.09683701669778849,
+          "alternative": "greater",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.07499511838116435,
+          0.11901541319470575
+        ],
+        "cluster_bootstrap_99_ci": [
+          0.07499511838116435,
+          0.11901541319470575
+        ]
+      },
+      "primary_pass": true,
+      "result_status": "ROBUST"
+    },
+    "C3": {
+      "left_condition": "pseudocode",
+      "right_condition": "python_canonical",
+      "alternative": "positive",
+      "primary_h20": {
+        "n": 100,
+        "mean": 0.3730460942439051,
+        "median": 0.3614275931867079,
+        "sd": 0.0985413737649977,
+        "cohens_dz": 3.7856798620805567,
+        "positive": 100,
+        "negative": 0,
+        "zero": 0,
+        "positive_fraction": 1.0,
+        "exact_sign_p": 7.888609052210118e-31,
+        "signflip": {
+          "observed_mean": 0.3730460942439051,
+          "alternative": "greater",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.3481567331511945,
+          0.3988507898808376
+        ],
+        "holm_adjusted_p": 1.9999900000499998e-05
+      },
+      "valid_vocab_mean_delta": 0.5359992998569678,
+      "semantic_step_balanced_mean_delta": 0.2447634280744742,
+      "family_cluster_robustness": {
+        "n": 50,
+        "mean": 0.3730460942439052,
+        "median": 0.36102709275827355,
+        "sd": 0.09465865914469046,
+        "cohens_dz": 3.940961108203379,
+        "positive": 50,
+        "negative": 0,
+        "zero": 0,
+        "positive_fraction": 1.0,
+        "exact_sign_p": 8.881784197001252e-16,
+        "signflip": {
+          "observed_mean": 0.3730460942439052,
+          "alternative": "greater",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.3394194978621663,
+          0.40731876666107064
+        ],
+        "cluster_bootstrap_99_ci": [
+          0.3394194978621663,
+          0.40731876666107064
+        ]
+      },
+      "primary_pass": true,
+      "result_status": "ROBUST"
+    },
+    "C4": {
+      "left_condition": "python_opaque",
+      "right_condition": "python_canonical",
+      "alternative": "two_sided",
+      "primary_h20": {
+        "n": 100,
+        "mean": 0.16440740962827083,
+        "median": 0.1625921408991461,
+        "sd": 0.08429261741741317,
+        "cohens_dz": 1.9504366416116001,
+        "positive": 100,
+        "negative": 0,
+        "zero": 0,
+        "positive_fraction": 1.0,
+        "exact_sign_p": 1.5777218104420236e-30,
+        "signflip": {
+          "observed_mean": 0.16440740962827083,
+          "alternative": "two-sided",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.14296304196608725,
+          0.18652942234370812
+        ],
+        "holm_adjusted_p": 1.9999900000499998e-05
+      },
+      "valid_vocab_mean_delta": 0.39056881055680537,
+      "semantic_step_balanced_mean_delta": 0.13682664908527117,
+      "family_cluster_robustness": {
+        "n": 50,
+        "mean": 0.16440740962827083,
+        "median": 0.16427657762060485,
+        "sd": 0.07969826073302978,
+        "cohens_dz": 2.06287324360812,
+        "positive": 50,
+        "negative": 0,
+        "zero": 0,
+        "positive_fraction": 1.0,
+        "exact_sign_p": 1.7763568394002505e-15,
+        "signflip": {
+          "observed_mean": 0.16440740962827083,
+          "alternative": "two-sided",
+          "extreme_resamples": 0,
+          "n_resamples": 200000,
+          "p_plus1": 4.9999750001249995e-06
+        },
+        "bootstrap_99_ci": [
+          0.13617803940288334,
+          0.19343550301061466
+        ],
+        "cluster_bootstrap_99_ci": [
+          0.13617803940288334,
+          0.19343550301061466
+        ]
+      },
+      "difference_significant": true,
+      "primary_nonzero_pass": true,
+      "task_sign_count_in_observed_direction": 100,
+      "family_sign_count_in_observed_direction": 50,
+      "equivalence_margin": 0.0635291352,
+      "equivalent": false,
+      "c4_interpretation": "statistically_different_potentially_meaningful",
+      "directional_robustness_matches": true,
+      "result_status": "ROBUST"
+    }
+  },
+  "guardrail": "C1-C3 are sequential representational intervention effects, not isolated single-feature causal effects."
+}

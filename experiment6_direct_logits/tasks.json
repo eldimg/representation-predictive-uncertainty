@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "scan_max",
+    "family": "scan_extremum",
+    "task": "Given a non-empty list of numbers, find the largest value by scanning the list once.",
+    "nl": [
+      "Use the first value as the current maximum. Examine each remaining value. If a value is larger than the current maximum, replace the current maximum with it. Return the current maximum after the scan.",
+      "Take the first value as the current maximum. Inspect each remaining value. If a value is larger than the current maximum, replace the current maximum with it. Output the current maximum after the scan.",
+      "Set the first value as the current maximum. Process each remaining value. If a value is larger than the current maximum, replace the current maximum with it. Produce the current maximum after the scan."
+    ],
+    "python": [
+      "def scan_max(values):\n    best = values[0]\n    for value in values[1:]:\n        if value > best:\n            best = value\n    return best",
+      "def scan_max(current):\n    item = current[0]\n    for value in current[1:]:\n        if value > item:\n            item = value\n    return item",
+      "def scan_max(x):\n    element = x[0]\n    for entry in x[1:]:\n        if entry > element:\n            element = entry\n    return element"
+    ]
+  },
+  {
+    "id": "scan_min",
+    "family": "scan_extremum",
+    "task": "Given a non-empty list of numbers, find the smallest value by scanning the list once.",
+    "nl": [
+      "Use the first value as the current minimum. Examine each remaining value. If a value is smaller than the current minimum, replace the current minimum with it. Return the current minimum after the scan.",
+      "Take the first value as the current minimum. Inspect each remaining value. If a value is smaller than the current minimum, replace the current minimum with it. Output the current minimum after the scan.",
+      "Set the first value as the current minimum. Process each remaining value. If a value is smaller than the current minimum, replace the current minimum with it. Produce the current minimum after the scan."
+    ],
+    "python": [
+      "def scan_min(values):\n    best = values[0]\n    for value in values[1:]:\n        if value < best:\n            best = value\n    return best",
+      "def scan_min(current):\n    item = current[0]\n    for value in current[1:]:\n        if value < item:\n            item = value\n    return item",
+      "def scan_min(x):\n    element = x[0]\n    for entry in x[1:]:\n        if entry < element:\n            element = entry\n    return element"
+    ]
+  },
+  {
+    "id": "count_even",
+    "family": "parity_count",
+    "task": "Given a list of integers, count how many values are even.",
+    "nl": [
+      "Start a counter at zero. Examine every integer. Whenever the current value is even, increase the counter by one. Return the counter after all values are processed.",
+      "Begin a counter at zero. Inspect every integer. When the current value is even, increase the counter by one. Output the counter after all values are processed.",
+      "Initialize a counter at zero. Process every integer. For any case in which the current value is even, increase the counter by one. Produce the counter after all values are processed."
+    ],
+    "python": [
+      "def count_even(values):\n    count = 0\n    for value in values:\n        if value % 2 == 0:\n            count += 1\n    return count",
+      "def count_even(current):\n    item = 0\n    for value in current:\n        if value % 2 == 0:\n            item += 1\n    return item",
+      "def count_even(x):\n    element = 0\n    for entry in x:\n        if entry % 2 == 0:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "count_odd",
+    "family": "parity_count",
+    "task": "Given a list of integers, count how many values are odd.",
+    "nl": [
+      "Start a counter at zero. Examine every integer. Whenever the current value is odd, increase the counter by one. Return the counter after all values are processed.",
+      "Begin a counter at zero. Inspect every integer. When the current value is odd, increase the counter by one. Output the counter after all values are processed.",
+      "Initialize a counter at zero. Process every integer. For any case in which the current value is odd, increase the counter by one. Produce the counter after all values are processed."
+    ],
+    "python": [
+      "def count_odd(values):\n    count = 0\n    for value in values:\n        if value % 2 != 0:\n            count += 1\n    return count",
+      "def count_odd(current):\n    item = 0\n    for value in current:\n        if value % 2 != 0:\n            item += 1\n    return item",
+      "def count_odd(x):\n    element = 0\n    for entry in x:\n        if entry % 2 != 0:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "sum_positive",
+    "family": "sign_sum",
+    "task": "Given a list of numbers, sum only the positive values.",
+    "nl": [
+      "Start the total at zero. Examine every number. Whenever a number is greater than zero, add it to the total. Return the total after the list has been processed.",
+      "Begin the total at zero. Inspect every number. If a number is greater than zero, add it to the total. Output the total after the list has been processed.",
+      "Initialize the total at zero. Process every number. For any case in which a number is greater than zero, add it to the total. Produce the total after the list has been processed."
+    ],
+    "python": [
+      "def sum_positive(values):\n    total = 0\n    for value in values:\n        if value > 0:\n            total += value\n    return total",
+      "def sum_positive(current):\n    item = 0\n    for value in current:\n        if value > 0:\n            item += value\n    return item",
+      "def sum_positive(x):\n    element = 0\n    for entry in x:\n        if entry > 0:\n            element += entry\n    return element"
+    ]
+  },
+  {
+    "id": "sum_negative",
+    "family": "sign_sum",
+    "task": "Given a list of numbers, sum only the negative values.",
+    "nl": [
+      "Start the total at zero. Examine every number. Whenever a number is less than zero, add it to the total. Return the total after the list has been processed.",
+      "Begin the total at zero. Inspect every number. If a number is less than zero, add it to the total. Output the total after the list has been processed.",
+      "Initialize the total at zero. Process every number. For any case in which a number is less than zero, add it to the total. Produce the total after the list has been processed."
+    ],
+    "python": [
+      "def sum_negative(values):\n    total = 0\n    for value in values:\n        if value < 0:\n            total += value\n    return total",
+      "def sum_negative(current):\n    item = 0\n    for value in current:\n        if value < 0:\n            item += value\n    return item",
+      "def sum_negative(x):\n    element = 0\n    for entry in x:\n        if entry < 0:\n            element += entry\n    return element"
+    ]
+  },
+  {
+    "id": "contains_target",
+    "family": "membership_test",
+    "task": "Given a list of values and a target, determine whether the target occurs in the list.",
+    "nl": [
+      "Examine the values one by one. If the current value equals the target, return true immediately. If the scan finishes without a match, return false.",
+      "Inspect the values one by one. When the current value equals the target, output true immediately. When the scan finishes without a match, output false.",
+      "Process the values one by one. If the current value equals the target, return true immediately. If the scan finishes without a match, return false."
+    ],
+    "python": [
+      "def contains_target(values, target):\n    for value in values:\n        if value == target:\n            return True\n    return False",
+      "def contains_target(current, item):\n    for value in current:\n        if value == item:\n            return True\n    return False",
+      "def contains_target(x, element):\n    for entry in x:\n        if entry == element:\n            return True\n    return False"
+    ]
+  },
+  {
+    "id": "contains_zero",
+    "family": "membership_test",
+    "task": "Given a list of numbers, determine whether zero occurs in the list.",
+    "nl": [
+      "Examine the numbers one by one. If the current number equals zero, return true immediately. If the scan finishes without finding zero, return false.",
+      "Inspect the numbers one by one. When the current number equals zero, output true immediately. When the scan finishes without finding zero, output false.",
+      "Process the numbers one by one. If the current number equals zero, return true immediately. If the scan finishes without finding zero, return false."
+    ],
+    "python": [
+      "def contains_zero(values):\n    for value in values:\n        if value == 0:\n            return True\n    return False",
+      "def contains_zero(value):\n    for item in value:\n        if item == 0:\n            return True\n    return False",
+      "def contains_zero(entry):\n    for element in entry:\n        if element == 0:\n            return True\n    return False"
+    ]
+  },
+  {
+    "id": "filter_nonnegative",
+    "family": "sign_filter",
+    "task": "Given a list of numbers, create a new list containing only values greater than or equal to zero.",
+    "nl": [
+      "Start with an empty result list. Examine every number. Whenever a number is at least zero, append it to the result. Return the result after processing the input.",
+      "Begin with an empty result list. Inspect every number. If a number is at least zero, add it to the result. Output the result after processing the input.",
+      "Initialize with an empty result list. Process every number. For any case in which a number is at least zero, append it to the result. Produce the result after processing the input."
+    ],
+    "python": [
+      "def filter_nonnegative(values):\n    result = []\n    for value in values:\n        if value >= 0:\n            result.append(value)\n    return result",
+      "def filter_nonnegative(current):\n    item = []\n    for value in current:\n        if value >= 0:\n            item.append(value)\n    return item",
+      "def filter_nonnegative(x):\n    element = []\n    for entry in x:\n        if entry >= 0:\n            element.append(entry)\n    return element"
+    ]
+  },
+  {
+    "id": "filter_negative",
+    "family": "sign_filter",
+    "task": "Given a list of numbers, create a new list containing only negative values.",
+    "nl": [
+      "Start with an empty result list. Examine every number. Whenever a number is less than zero, append it to the result. Return the result after processing the input.",
+      "Begin with an empty result list. Inspect every number. If a number is less than zero, add it to the result. Output the result after processing the input.",
+      "Initialize with an empty result list. Process every number. For any case in which a number is less than zero, append it to the result. Produce the result after processing the input."
+    ],
+    "python": [
+      "def filter_negative(values):\n    result = []\n    for value in values:\n        if value < 0:\n            result.append(value)\n    return result",
+      "def filter_negative(current):\n    item = []\n    for value in current:\n        if value < 0:\n            item.append(value)\n    return item",
+      "def filter_negative(x):\n    element = []\n    for entry in x:\n        if entry < 0:\n            element.append(entry)\n    return element"
+    ]
+  },
+  {
+    "id": "count_above",
+    "family": "threshold_count",
+    "task": "Given a list of numbers and a threshold, count the values greater than the threshold.",
+    "nl": [
+      "Start a counter at zero. Examine every value. Whenever the current value is greater than the threshold, increase the counter by one. Return the counter.",
+      "Begin a counter at zero. Inspect every value. When the current value is greater than the threshold, increase the counter by one. Output the counter.",
+      "Initialize a counter at zero. Process every value. For any case in which the current value is greater than the threshold, increase the counter by one. Produce the counter."
+    ],
+    "python": [
+      "def count_above(values, threshold):\n    count = 0\n    for value in values:\n        if value > threshold:\n            count += 1\n    return count",
+      "def count_above(output, value):\n    item = 0\n    for current in output:\n        if current > value:\n            item += 1\n    return item",
+      "def count_above(result, entry):\n    element = 0\n    for x in result:\n        if x > entry:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "count_below",
+    "family": "threshold_count",
+    "task": "Given a list of numbers and a threshold, count the values less than the threshold.",
+    "nl": [
+      "Start a counter at zero. Examine every value. Whenever the current value is less than the threshold, increase the counter by one. Return the counter.",
+      "Begin a counter at zero. Inspect every value. When the current value is less than the threshold, increase the counter by one. Output the counter.",
+      "Initialize a counter at zero. Process every value. For any case in which the current value is less than the threshold, increase the counter by one. Produce the counter."
+    ],
+    "python": [
+      "def count_below(values, threshold):\n    count = 0\n    for value in values:\n        if value < threshold:\n            count += 1\n    return count",
+      "def count_below(output, value):\n    item = 0\n    for current in output:\n        if current < value:\n            item += 1\n    return item",
+      "def count_below(result, entry):\n    element = 0\n    for x in result:\n        if x < entry:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "first_even_index",
+    "family": "first_match_index",
+    "task": "Given a list of integers, return the index of the first even value, or minus one if none exists.",
+    "nl": [
+      "Examine the list from the beginning while tracking the current index. When an even value is encountered, return its index. If the end is reached with no match, return minus one.",
+      "Inspect the list from the beginning while tracking the current index. If an even value is encountered, output its index. When the end is reached with no match, output minus one.",
+      "Process the list from the beginning while tracking the current index. Whenever an even value is encountered, return its index. If the end is reached with no match, return minus one."
+    ],
+    "python": [
+      "def first_even_index(values):\n    for index, value in enumerate(values):\n        if value % 2 == 0:\n            return index\n    return -1",
+      "def first_even_index(current):\n    for item, value in enumerate(current):\n        if value % 2 == 0:\n            return item\n    return -1",
+      "def first_even_index(x):\n    for element, entry in enumerate(x):\n        if entry % 2 == 0:\n            return element\n    return -1"
+    ]
+  },
+  {
+    "id": "first_negative_index",
+    "family": "first_match_index",
+    "task": "Given a list of numbers, return the index of the first negative value, or minus one if none exists.",
+    "nl": [
+      "Examine the list from the beginning while tracking the current index. When a negative value is encountered, return its index. If the end is reached with no match, return minus one.",
+      "Inspect the list from the beginning while tracking the current index. If a negative value is encountered, output its index. When the end is reached with no match, output minus one.",
+      "Process the list from the beginning while tracking the current index. Whenever a negative value is encountered, return its index. If the end is reached with no match, return minus one."
+    ],
+    "python": [
+      "def first_negative_index(values):\n    for index, value in enumerate(values):\n        if value < 0:\n            return index\n    return -1",
+      "def first_negative_index(current):\n    for item, value in enumerate(current):\n        if value < 0:\n            return item\n    return -1",
+      "def first_negative_index(x):\n    for element, entry in enumerate(x):\n        if entry < 0:\n            return element\n    return -1"
+    ]
+  },
+  {
+    "id": "running_sum",
+    "family": "cumulative_scan",
+    "task": "Given a list of numbers, produce the running sum after each position.",
+    "nl": [
+      "Start a total at zero and create an empty result list. Examine the numbers in order. Add each value to the total and append the updated total to the result. Return the result.",
+      "Begin a total at zero and build an empty result list. Inspect the numbers in order. Include each value to the total and add the updated total to the result. Output the result.",
+      "Initialize a total at zero and create an empty result list. Process the numbers in order. Accumulate each value to the total and append the updated total to the result. Produce the result."
+    ],
+    "python": [
+      "def running_sum(values):\n    total = 0\n    result = []\n    for value in values:\n        total += value\n        result.append(total)\n    return result",
+      "def running_sum(output):\n    value = 0\n    item = []\n    for current in output:\n        value += current\n        item.append(value)\n    return item",
+      "def running_sum(result):\n    entry = 0\n    element = []\n    for x in result:\n        entry += x\n        element.append(entry)\n    return element"
+    ]
+  },
+  {
+    "id": "running_product",
+    "family": "cumulative_scan",
+    "task": "Given a list of numbers, produce the running product after each position.",
+    "nl": [
+      "Start a product at one and create an empty result list. Examine the numbers in order. Multiply the product by each value and append the updated product to the result. Return the result.",
+      "Begin a product at one and build an empty result list. Inspect the numbers in order. Multiply the product by each value and add the updated product to the result. Output the result.",
+      "Initialize a product at one and create an empty result list. Process the numbers in order. Multiply the product by each value and append the updated product to the result. Produce the result."
+    ],
+    "python": [
+      "def running_product(values):\n    product = 1\n    result = []\n    for value in values:\n        product *= value\n        result.append(product)\n    return result",
+      "def running_product(output):\n    item = 1\n    value = []\n    for current in output:\n        item *= current\n        value.append(item)\n    return value",
+      "def running_product(result):\n    element = 1\n    entry = []\n    for x in result:\n        element *= x\n        entry.append(element)\n    return entry"
+    ]
+  },
+  {
+    "id": "dedupe_first",
+    "family": "deduplication",
+    "task": "Given a list, remove duplicate values while keeping the first occurrence of each value.",
+    "nl": [
+      "Start with an empty result list. Examine the input values in order. If the current value is not already in the result, append it. Return the result after the scan.",
+      "Begin with an empty result list. Inspect the input values in order. When the current value is not already in the result, add it. Output the result after the scan.",
+      "Initialize with an empty result list. Process the input values in order. If the current value is not already in the result, append it. Produce the result after the scan."
+    ],
+    "python": [
+      "def dedupe_first(values):\n    result = []\n    for value in values:\n        if value not in result:\n            result.append(value)\n    return result",
+      "def dedupe_first(current):\n    item = []\n    for value in current:\n        if value not in item:\n            item.append(value)\n    return item",
+      "def dedupe_first(x):\n    element = []\n    for entry in x:\n        if entry not in element:\n            element.append(entry)\n    return element"
+    ]
+  },
+  {
+    "id": "dedupe_last",
+    "family": "deduplication",
+    "task": "Given a list, remove duplicate values while keeping the last occurrence of each value and preserving the order of those kept occurrences.",
+    "nl": [
+      "Start with an empty temporary list. Examine the input from right to left. If the current value has not yet been kept, append it to the temporary list. Reverse that list and return it.",
+      "Begin with an empty temporary list. Inspect the input from right to left. When the current value has not yet been kept, add it to the temporary list. Reverse that list and output it.",
+      "Initialize with an empty temporary list. Process the input from right to left. If the current value has not yet been kept, append it to the temporary list. Reverse that list and return it."
+    ],
+    "python": [
+      "def dedupe_last(values):\n    result = []\n    for value in reversed(values):\n        if value not in result:\n            result.append(value)\n    result.reverse()\n    return result",
+      "def dedupe_last(current):\n    item = []\n    for value in reversed(current):\n        if value not in item:\n            item.append(value)\n    item.reverse()\n    return item",
+      "def dedupe_last(x):\n    element = []\n    for entry in reversed(x):\n        if entry not in element:\n            element.append(entry)\n    element.reverse()\n    return element"
+    ]
+  },
+  {
+    "id": "absolute_values",
+    "family": "element_transform",
+    "task": "Given a list of numbers, create a list containing the absolute value of each element.",
+    "nl": [
+      "Create an empty result list. Examine each input number, compute its absolute value, and append that value to the result. Return the result.",
+      "Build an empty result list. Inspect each input number, compute its absolute value, and add that value to the result. Output the result.",
+      "Initialize an empty result list. Process each input number, compute its absolute value, and append that value to the result. Produce the result."
+    ],
+    "python": [
+      "def absolute_values(values):\n    result = []\n    for value in values:\n        result.append(abs(value))\n    return result",
+      "def absolute_values(current):\n    item = []\n    for value in current:\n        item.append(abs(value))\n    return item",
+      "def absolute_values(x):\n    element = []\n    for entry in x:\n        element.append(abs(entry))\n    return element"
+    ]
+  },
+  {
+    "id": "square_values",
+    "family": "element_transform",
+    "task": "Given a list of numbers, create a list containing the square of each element.",
+    "nl": [
+      "Create an empty result list. Examine each input number, multiply it by itself, and append the product to the result. Return the result.",
+      "Build an empty result list. Inspect each input number, multiply it by itself, and add the product to the result. Output the result.",
+      "Initialize an empty result list. Process each input number, multiply it by itself, and append the product to the result. Produce the result."
+    ],
+    "python": [
+      "def square_values(values):\n    result = []\n    for value in values:\n        result.append(value * value)\n    return result",
+      "def square_values(current):\n    item = []\n    for value in current:\n        item.append(value * value)\n    return item",
+      "def square_values(x):\n    element = []\n    for entry in x:\n        element.append(entry * entry)\n    return element"
+    ]
+  },
+  {
+    "id": "count_character",
+    "family": "char_count",
+    "task": "Given a string and a character, count how many times that character appears.",
+    "nl": [
+      "Start a counter at zero. Examine each character in the string. Whenever it equals the target character, increase the counter by one. Return the counter.",
+      "Begin a counter at zero. Inspect each character in the string. If it equals the target character, increase the counter by one. Output the counter.",
+      "Initialize a counter at zero. Process each character in the string. For any case in which it equals the target character, increase the counter by one. Produce the counter."
+    ],
+    "python": [
+      "def count_character(text, target):\n    count = 0\n    for char in text:\n        if char == target:\n            count += 1\n    return count",
+      "def count_character(output, current):\n    value = 0\n    for item in output:\n        if item == current:\n            value += 1\n    return value",
+      "def count_character(result, x):\n    entry = 0\n    for element in result:\n        if element == x:\n            entry += 1\n    return entry"
+    ]
+  },
+  {
+    "id": "count_vowels",
+    "family": "char_count",
+    "task": "Given a lowercase string, count how many characters are vowels.",
+    "nl": [
+      "Start a counter at zero. Examine each character. Whenever it is one of a, e, i, o, or u, increase the counter by one. Return the counter.",
+      "Begin a counter at zero. Inspect each character. If it is one of a, e, i, o, or u, increase the counter by one. Output the counter.",
+      "Initialize a counter at zero. Process each character. For any case in which it is one of a, e, i, o, or u, increase the counter by one. Produce the counter."
+    ],
+    "python": [
+      "def count_vowels(text):\n    count = 0\n    for char in text:\n        if char in \"aeiou\":\n            count += 1\n    return count",
+      "def count_vowels(current):\n    value = 0\n    for item in current:\n        if item in \"aeiou\":\n            value += 1\n    return value",
+      "def count_vowels(x):\n    entry = 0\n    for element in x:\n        if element in \"aeiou\":\n            entry += 1\n    return entry"
+    ]
+  },
+  {
+    "id": "remove_digits",
+    "family": "string_filter",
+    "task": "Given a string, return a new string with all decimal digits removed.",
+    "nl": [
+      "Start with an empty result string. Examine each character. If it is not a decimal digit, append it to the result. Return the result.",
+      "Begin with an empty result string. Inspect each character. If it is not a decimal digit, add it to the result. Output the result.",
+      "Initialize with an empty result string. Process each character. If it is not a decimal digit, append it to the result. Produce the result."
+    ],
+    "python": [
+      "def remove_digits(text):\n    result = \"\"\n    for char in text:\n        if not char.isdigit():\n            result += char\n    return result",
+      "def remove_digits(current):\n    value = \"\"\n    for item in current:\n        if not item.isdigit():\n            value += item\n    return value",
+      "def remove_digits(x):\n    entry = \"\"\n    for element in x:\n        if not element.isdigit():\n            entry += element\n    return entry"
+    ]
+  },
+  {
+    "id": "keep_letters",
+    "family": "string_filter",
+    "task": "Given a string, return a new string containing only alphabetic characters.",
+    "nl": [
+      "Start with an empty result string. Examine each character. If it is alphabetic, append it to the result. Return the result.",
+      "Begin with an empty result string. Inspect each character. If it is alphabetic, add it to the result. Output the result.",
+      "Initialize with an empty result string. Process each character. If it is alphabetic, append it to the result. Produce the result."
+    ],
+    "python": [
+      "def keep_letters(text):\n    result = \"\"\n    for char in text:\n        if char.isalpha():\n            result += char\n    return result",
+      "def keep_letters(current):\n    value = \"\"\n    for item in current:\n        if item.isalpha():\n            value += item\n    return value",
+      "def keep_letters(x):\n    entry = \"\"\n    for element in x:\n        if element.isalpha():\n            entry += element\n    return entry"
+    ]
+  },
+  {
+    "id": "count_words",
+    "family": "word_count",
+    "task": "Given a string containing words separated by whitespace, count the words.",
+    "nl": [
+      "Split the string on whitespace and return the number of resulting words.",
+      "Split the string on whitespace and output the number of resulting words.",
+      "Proceed as follows. Split the string on whitespace and return the number of resulting words."
+    ],
+    "python": [
+      "def count_words(text):\n    words = text.split()\n    return len(words)",
+      "def count_words(item):\n    value = item.split()\n    return len(value)",
+      "def count_words(element):\n    entry = element.split()\n    return len(entry)"
+    ]
+  },
+  {
+    "id": "count_unique_words",
+    "family": "word_count",
+    "task": "Given a string containing words separated by whitespace, count the distinct words.",
+    "nl": [
+      "Split the string on whitespace, place the words into a set, and return the size of the set.",
+      "Split the string on whitespace, place the words into a set, and output the size of the set.",
+      "Proceed as follows. Split the string on whitespace, place the words into a set, and return the size of the set."
+    ],
+    "python": [
+      "def count_unique_words(text):\n    words = text.split()\n    unique = set(words)\n    return len(unique)",
+      "def count_unique_words(item):\n    current = item.split()\n    value = set(current)\n    return len(value)",
+      "def count_unique_words(element):\n    x = element.split()\n    entry = set(x)\n    return len(entry)"
+    ]
+  },
+  {
+    "id": "string_palindrome",
+    "family": "palindrome_test",
+    "task": "Given a string, determine whether it reads the same forward and backward.",
+    "nl": [
+      "Set one index at the beginning and another at the end. Compare the two characters and move both indices inward. Return false on a mismatch; return true if all mirrored pairs match.",
+      "Set one index at the beginning and another at the end. Compare the two characters and move both indices inward. Output false on a mismatch; output true if all mirrored pairs match.",
+      "Set one index at the beginning and another at the end. Compare the two characters and move both indices inward. Produce false on a mismatch; return true if all mirrored pairs match."
+    ],
+    "python": [
+      "def string_palindrome(text):\n    left = 0\n    right = len(text) - 1\n    while left < right:\n        if text[left] != text[right]:\n            return False\n        left += 1\n        right -= 1\n    return True",
+      "def string_palindrome(current):\n    item = 0\n    value = len(current) - 1\n    while item < value:\n        if current[item] != current[value]:\n            return False\n        item += 1\n        value -= 1\n    return True",
+      "def string_palindrome(x):\n    element = 0\n    entry = len(x) - 1\n    while element < entry:\n        if x[element] != x[entry]:\n            return False\n        element += 1\n        entry -= 1\n    return True"
+    ]
+  },
+  {
+    "id": "list_palindrome",
+    "family": "palindrome_test",
+    "task": "Given a list, determine whether its values read the same forward and backward.",
+    "nl": [
+      "Set one index at the beginning and another at the end. Compare the two values and move both indices inward. Return false on a mismatch; return true if all mirrored pairs match.",
+      "Set one index at the beginning and another at the end. Compare the two values and move both indices inward. Output false on a mismatch; output true if all mirrored pairs match.",
+      "Set one index at the beginning and another at the end. Compare the two values and move both indices inward. Produce false on a mismatch; return true if all mirrored pairs match."
+    ],
+    "python": [
+      "def list_palindrome(values):\n    left = 0\n    right = len(values) - 1\n    while left < right:\n        if values[left] != values[right]:\n            return False\n        left += 1\n        right -= 1\n    return True",
+      "def list_palindrome(current):\n    item = 0\n    value = len(current) - 1\n    while item < value:\n        if current[item] != current[value]:\n            return False\n        item += 1\n        value -= 1\n    return True",
+      "def list_palindrome(x):\n    element = 0\n    entry = len(x) - 1\n    while element < entry:\n        if x[element] != x[entry]:\n            return False\n        element += 1\n        entry -= 1\n    return True"
+    ]
+  },
+  {
+    "id": "is_nondecreasing",
+    "family": "monotonicity",
+    "task": "Given a list of numbers, determine whether it is in nondecreasing order.",
+    "nl": [
+      "Examine each adjacent pair from left to right. If an earlier value is greater than the following value, return false. Return true if no such pair exists.",
+      "Inspect each adjacent pair from left to right. If an earlier value is greater than the following value, output false. Output true if no such pair exists.",
+      "Process each adjacent pair from left to right. If an earlier value is greater than the following value, return false. Produce true if no such pair exists."
+    ],
+    "python": [
+      "def is_nondecreasing(values):\n    for index in range(1, len(values)):\n        if values[index - 1] > values[index]:\n            return False\n    return True",
+      "def is_nondecreasing(value):\n    for item in range(1, len(value)):\n        if value[item - 1] > value[item]:\n            return False\n    return True",
+      "def is_nondecreasing(entry):\n    for element in range(1, len(entry)):\n        if entry[element - 1] > entry[element]:\n            return False\n    return True"
+    ]
+  },
+  {
+    "id": "is_strictly_increasing",
+    "family": "monotonicity",
+    "task": "Given a list of numbers, determine whether it is strictly increasing.",
+    "nl": [
+      "Examine each adjacent pair from left to right. If an earlier value is greater than or equal to the following value, return false. Return true if every pair increases.",
+      "Inspect each adjacent pair from left to right. If an earlier value is greater than or equal to the following value, output false. Output true if every pair increases.",
+      "Process each adjacent pair from left to right. If an earlier value is greater than or equal to the following value, return false. Produce true if every pair increases."
+    ],
+    "python": [
+      "def is_strictly_increasing(values):\n    for index in range(1, len(values)):\n        if values[index - 1] >= values[index]:\n            return False\n    return True",
+      "def is_strictly_increasing(value):\n    for item in range(1, len(value)):\n        if value[item - 1] >= value[item]:\n            return False\n    return True",
+      "def is_strictly_increasing(entry):\n    for element in range(1, len(entry)):\n        if entry[element - 1] >= entry[element]:\n            return False\n    return True"
+    ]
+  },
+  {
+    "id": "count_increases",
+    "family": "adjacent_analysis",
+    "task": "Given a list of numbers, count how many positions contain a value larger than the immediately preceding value.",
+    "nl": [
+      "Start a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the current value is larger. Return the counter.",
+      "Begin a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the current value is larger. Output the counter.",
+      "Initialize a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the current value is larger. Produce the counter."
+    ],
+    "python": [
+      "def count_increases(values):\n    count = 0\n    for index in range(1, len(values)):\n        if values[index] > values[index - 1]:\n            count += 1\n    return count",
+      "def count_increases(current):\n    item = 0\n    for value in range(1, len(current)):\n        if current[value] > current[value - 1]:\n            item += 1\n    return item",
+      "def count_increases(x):\n    element = 0\n    for entry in range(1, len(x)):\n        if x[entry] > x[entry - 1]:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "count_equal_neighbors",
+    "family": "adjacent_analysis",
+    "task": "Given a list, count how many adjacent pairs contain equal values.",
+    "nl": [
+      "Start a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the two values are equal. Return the counter.",
+      "Begin a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the two values are equal. Output the counter.",
+      "Initialize a counter at zero. Compare each value after the first with its predecessor. Increase the counter when the two values are equal. Produce the counter."
+    ],
+    "python": [
+      "def count_equal_neighbors(values):\n    count = 0\n    for index in range(1, len(values)):\n        if values[index] == values[index - 1]:\n            count += 1\n    return count",
+      "def count_equal_neighbors(current):\n    item = 0\n    for value in range(1, len(current)):\n        if current[value] == current[value - 1]:\n            item += 1\n    return item",
+      "def count_equal_neighbors(x):\n    element = 0\n    for entry in range(1, len(x)):\n        if x[entry] == x[entry - 1]:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "adjacent_differences",
+    "family": "adjacent_transform",
+    "task": "Given a list of numbers, create a list of differences between each value and its predecessor.",
+    "nl": [
+      "Create an empty result list. Starting with the second input value, subtract the preceding value from the current value and append the difference. Return the result.",
+      "Build an empty result list. Starting with the second input value, subtract the preceding value from the current value and add the difference. Output the result.",
+      "Initialize an empty result list. Starting with the second input value, subtract the preceding value from the current value and append the difference. Produce the result."
+    ],
+    "python": [
+      "def adjacent_differences(values):\n    result = []\n    for index in range(1, len(values)):\n        result.append(values[index] - values[index - 1])\n    return result",
+      "def adjacent_differences(current):\n    value = []\n    for item in range(1, len(current)):\n        value.append(current[item] - current[item - 1])\n    return value",
+      "def adjacent_differences(x):\n    entry = []\n    for element in range(1, len(x)):\n        entry.append(x[element] - x[element - 1])\n    return entry"
+    ]
+  },
+  {
+    "id": "adjacent_sums",
+    "family": "adjacent_transform",
+    "task": "Given a list of numbers, create a list containing the sum of each adjacent pair.",
+    "nl": [
+      "Create an empty result list. Starting with the second input value, add it to the preceding value and append the sum. Return the result.",
+      "Build an empty result list. Starting with the second input value, add it to the preceding value and add the sum. Output the result.",
+      "Initialize an empty result list. Starting with the second input value, add it to the preceding value and append the sum. Produce the result."
+    ],
+    "python": [
+      "def adjacent_sums(values):\n    result = []\n    for index in range(1, len(values)):\n        result.append(values[index] + values[index - 1])\n    return result",
+      "def adjacent_sums(current):\n    value = []\n    for item in range(1, len(current)):\n        value.append(current[item] + current[item - 1])\n    return value",
+      "def adjacent_sums(x):\n    entry = []\n    for element in range(1, len(x)):\n        entry.append(x[element] + x[element - 1])\n    return entry"
+    ]
+  },
+  {
+    "id": "window_sum_three",
+    "family": "sliding_window",
+    "task": "Given a list of numbers, return the sum of every consecutive window of three values.",
+    "nl": [
+      "Create an empty result list. For each starting index that leaves three values available, add those three values and append the sum. Return the result.",
+      "Build an empty result list. For each starting index that leaves three values available, add those three values and add the sum. Output the result.",
+      "Initialize an empty result list. For each starting index that leaves three values available, add those three values and append the sum. Produce the result."
+    ],
+    "python": [
+      "def window_sum_three(values):\n    result = []\n    for index in range(len(values) - 2):\n        total = values[index] + values[index + 1] + values[index + 2]\n        result.append(total)\n    return result",
+      "def window_sum_three(output):\n    value = []\n    for item in range(len(output) - 2):\n        current = output[item] + output[item + 1] + output[item + 2]\n        value.append(current)\n    return value",
+      "def window_sum_three(result):\n    entry = []\n    for element in range(len(result) - 2):\n        x = result[element] + result[element + 1] + result[element + 2]\n        entry.append(x)\n    return entry"
+    ]
+  },
+  {
+    "id": "moving_average_three",
+    "family": "sliding_window",
+    "task": "Given a list of numbers, return the average of every consecutive window of three values.",
+    "nl": [
+      "Create an empty result list. For each starting index that leaves three values available, add those three values, divide by three, and append the average. Return the result.",
+      "Build an empty result list. For each starting index that leaves three values available, add those three values, divide by three, and add the average. Output the result.",
+      "Initialize an empty result list. For each starting index that leaves three values available, add those three values, divide by three, and append the average. Produce the result."
+    ],
+    "python": [
+      "def moving_average_three(values):\n    result = []\n    for index in range(len(values) - 2):\n        average = (values[index] + values[index + 1] + values[index + 2]) / 3\n        result.append(average)\n    return result",
+      "def moving_average_three(output):\n    current = []\n    for value in range(len(output) - 2):\n        item = (output[value] + output[value + 1] + output[value + 2]) / 3\n        current.append(item)\n    return current",
+      "def moving_average_three(result):\n    x = []\n    for entry in range(len(result) - 2):\n        element = (result[entry] + result[entry + 1] + result[entry + 2]) / 3\n        x.append(element)\n    return x"
+    ]
+  },
+  {
+    "id": "merge_sorted_ascending",
+    "family": "merge_sorted",
+    "task": "Given two lists sorted in ascending order, merge them into one ascending list.",
+    "nl": [
+      "Create an empty result and place one index at the start of each list. Repeatedly append the smaller current value and advance its index. Append any remaining values and return the result.",
+      "Build an empty result and place one index at the start of each list. Repeatedly add the smaller current value and advance its index. Add any remaining values and output the result.",
+      "Initialize an empty result and place one index at the start of each list. Repeatedly append the smaller current value and advance its index. Place any remaining values and return the result."
+    ],
+    "python": [
+      "def merge_sorted_ascending(left_values, right_values):\n    result = []\n    i = 0\n    j = 0\n    while i < len(left_values) and j < len(right_values):\n        if left_values[i] <= right_values[j]:\n            result.append(left_values[i])\n            i += 1\n        else:\n            result.append(right_values[j])\n            j += 1\n    result.extend(left_values[i:])\n    result.extend(right_values[j:])\n    return result",
+      "def merge_sorted_ascending(current, counter):\n    output = []\n    item = 0\n    value = 0\n    while item < len(current) and value < len(counter):\n        if current[item] <= counter[value]:\n            output.append(current[item])\n            item += 1\n        else:\n            output.append(counter[value])\n            value += 1\n    output.extend(current[item:])\n    output.extend(counter[value:])\n    return output",
+      "def merge_sorted_ascending(x, n_count):\n    result = []\n    element = 0\n    entry = 0\n    while element < len(x) and entry < len(n_count):\n        if x[element] <= n_count[entry]:\n            result.append(x[element])\n            element += 1\n        else:\n            result.append(n_count[entry])\n            entry += 1\n    result.extend(x[element:])\n    result.extend(n_count[entry:])\n    return result"
+    ]
+  },
+  {
+    "id": "merge_sorted_descending",
+    "family": "merge_sorted",
+    "task": "Given two lists sorted in descending order, merge them into one descending list.",
+    "nl": [
+      "Create an empty result and place one index at the start of each list. Repeatedly append the larger current value and advance its index. Append any remaining values and return the result.",
+      "Build an empty result and place one index at the start of each list. Repeatedly add the larger current value and advance its index. Add any remaining values and output the result.",
+      "Initialize an empty result and place one index at the start of each list. Repeatedly append the larger current value and advance its index. Place any remaining values and return the result."
+    ],
+    "python": [
+      "def merge_sorted_descending(left_values, right_values):\n    result = []\n    i = 0\n    j = 0\n    while i < len(left_values) and j < len(right_values):\n        if left_values[i] >= right_values[j]:\n            result.append(left_values[i])\n            i += 1\n        else:\n            result.append(right_values[j])\n            j += 1\n    result.extend(left_values[i:])\n    result.extend(right_values[j:])\n    return result",
+      "def merge_sorted_descending(current, counter):\n    output = []\n    item = 0\n    value = 0\n    while item < len(current) and value < len(counter):\n        if current[item] >= counter[value]:\n            output.append(current[item])\n            item += 1\n        else:\n            output.append(counter[value])\n            value += 1\n    output.extend(current[item:])\n    output.extend(counter[value:])\n    return output",
+      "def merge_sorted_descending(x, n_count):\n    result = []\n    element = 0\n    entry = 0\n    while element < len(x) and entry < len(n_count):\n        if x[element] >= n_count[entry]:\n            result.append(x[element])\n            element += 1\n        else:\n            result.append(n_count[entry])\n            entry += 1\n    result.extend(x[element:])\n    result.extend(n_count[entry:])\n    return result"
+    ]
+  },
+  {
+    "id": "ordered_intersection",
+    "family": "ordered_intersection",
+    "task": "Given two lists, return values from the first list that also occur in the second list, preserving duplicates and order from the first list.",
+    "nl": [
+      "Create an empty result. Examine each value in the first list. If that value occurs in the second list, append it to the result. Return the result.",
+      "Build an empty result. Inspect each value in the first list. If that value occurs in the second list, add it to the result. Output the result.",
+      "Initialize an empty result. Process each value in the first list. If that value occurs in the second list, append it to the result. Produce the result."
+    ],
+    "python": [
+      "def ordered_intersection(first, second):\n    result = []\n    for value in first:\n        if value in second:\n            result.append(value)\n    return result",
+      "def ordered_intersection(item, current):\n    value = []\n    for output in item:\n        if output in current:\n            value.append(output)\n    return value",
+      "def ordered_intersection(element, x):\n    entry = []\n    for result in element:\n        if result in x:\n            entry.append(result)\n    return entry"
+    ]
+  },
+  {
+    "id": "ordered_unique_intersection",
+    "family": "ordered_intersection",
+    "task": "Given two lists, return distinct values from the first list that also occur in the second list, preserving first-list order.",
+    "nl": [
+      "Create an empty result. Examine each value in the first list. If it occurs in the second list and is not already in the result, append it. Return the result.",
+      "Build an empty result. Inspect each value in the first list. If it occurs in the second list and is not already in the result, add it. Output the result.",
+      "Initialize an empty result. Process each value in the first list. If it occurs in the second list and is not already in the result, append it. Produce the result."
+    ],
+    "python": [
+      "def ordered_unique_intersection(first, second):\n    result = []\n    for value in first:\n        if value in second and value not in result:\n            result.append(value)\n    return result",
+      "def ordered_unique_intersection(item, current):\n    value = []\n    for output in item:\n        if output in current and output not in value:\n            value.append(output)\n    return value",
+      "def ordered_unique_intersection(element, x):\n    entry = []\n    for result in element:\n        if result in x and result not in entry:\n            entry.append(result)\n    return entry"
+    ]
+  },
+  {
+    "id": "is_subset",
+    "family": "set_relation",
+    "task": "Given two collections, determine whether every value in the first collection occurs in the second.",
+    "nl": [
+      "Examine each value in the first collection. If any value is absent from the second collection, return false. Return true if every value is present.",
+      "Inspect each value in the first collection. If any value is absent from the second collection, output false. Output true if every value is present.",
+      "Process each value in the first collection. If any value is absent from the second collection, return false. Produce true if every value is present."
+    ],
+    "python": [
+      "def is_subset(first, second):\n    for value in first:\n        if value not in second:\n            return False\n    return True",
+      "def is_subset(item, value):\n    for current in item:\n        if current not in value:\n            return False\n    return True",
+      "def is_subset(element, entry):\n    for x in element:\n        if x not in entry:\n            return False\n    return True"
+    ]
+  },
+  {
+    "id": "are_disjoint",
+    "family": "set_relation",
+    "task": "Given two collections, determine whether they have no value in common.",
+    "nl": [
+      "Examine each value in the first collection. If any value occurs in the second collection, return false. Return true if no common value is found.",
+      "Inspect each value in the first collection. If any value occurs in the second collection, output false. Output true if no common value is found.",
+      "Process each value in the first collection. If any value occurs in the second collection, return false. Produce true if no common value is found."
+    ],
+    "python": [
+      "def are_disjoint(first, second):\n    for value in first:\n        if value in second:\n            return False\n    return True",
+      "def are_disjoint(item, value):\n    for current in item:\n        if current in value:\n            return False\n    return True",
+      "def are_disjoint(element, entry):\n    for x in element:\n        if x in entry:\n            return False\n    return True"
+    ]
+  },
+  {
+    "id": "frequency_map_items",
+    "family": "frequency_map",
+    "task": "Given a list of hashable values, build a dictionary mapping each value to its occurrence count.",
+    "nl": [
+      "Start with an empty dictionary. Examine each value. If it is already a key, increase its count; otherwise create the key with count one. Return the dictionary.",
+      "Begin with an empty dictionary. Inspect each value. If it is already a key, increase its count; otherwise build the key with count one. Output the dictionary.",
+      "Initialize with an empty dictionary. Process each value. If it is already a key, increase its count; otherwise create the key with count one. Produce the dictionary."
+    ],
+    "python": [
+      "def frequency_map_items(values):\n    counts = {}\n    for value in values:\n        if value in counts:\n            counts[value] += 1\n        else:\n            counts[value] = 1\n    return counts",
+      "def frequency_map_items(current):\n    item = {}\n    for value in current:\n        if value in item:\n            item[value] += 1\n        else:\n            item[value] = 1\n    return item",
+      "def frequency_map_items(x):\n    element = {}\n    for entry in x:\n        if entry in element:\n            element[entry] += 1\n        else:\n            element[entry] = 1\n    return element"
+    ]
+  },
+  {
+    "id": "frequency_map_chars",
+    "family": "frequency_map",
+    "task": "Given a string, build a dictionary mapping each character to its occurrence count.",
+    "nl": [
+      "Start with an empty dictionary. Examine each character. If it is already a key, increase its count; otherwise create the key with count one. Return the dictionary.",
+      "Begin with an empty dictionary. Inspect each character. If it is already a key, increase its count; otherwise build the key with count one. Output the dictionary.",
+      "Initialize with an empty dictionary. Process each character. If it is already a key, increase its count; otherwise create the key with count one. Produce the dictionary."
+    ],
+    "python": [
+      "def frequency_map_chars(text):\n    counts = {}\n    for char in text:\n        if char in counts:\n            counts[char] += 1\n        else:\n            counts[char] = 1\n    return counts",
+      "def frequency_map_chars(current):\n    value = {}\n    for item in current:\n        if item in value:\n            value[item] += 1\n        else:\n            value[item] = 1\n    return value",
+      "def frequency_map_chars(x):\n    entry = {}\n    for element in x:\n        if element in entry:\n            entry[element] += 1\n        else:\n            entry[element] = 1\n    return entry"
+    ]
+  },
+  {
+    "id": "most_frequent",
+    "family": "mode_selection",
+    "task": "Given a non-empty list, return a value with the highest occurrence count, choosing the first such value on ties.",
+    "nl": [
+      "Build occurrence counts. Then scan the original list while tracking the best value and highest count seen. Replace the best only when a strictly higher count is found. Return the best value.",
+      "Build occurrence counts. Then scan the original list while tracking the best value and highest count seen. Replace the best only when a strictly higher count is found. Output the best value.",
+      "Initialize occurrence counts. Then scan the original list while tracking the best value and highest count seen. Replace the best only when a strictly higher count is found. Produce the best value."
+    ],
+    "python": [
+      "def most_frequent(values):\n    counts = {}\n    for value in values:\n        counts[value] = counts.get(value, 0) + 1\n    best = values[0]\n    for value in values:\n        if counts[value] > counts[best]:\n            best = value\n    return best",
+      "def most_frequent(output):\n    value = {}\n    for current in output:\n        value[current] = value.get(current, 0) + 1\n    item = output[0]\n    for current in output:\n        if value[current] > value[item]:\n            item = current\n    return item",
+      "def most_frequent(result):\n    entry = {}\n    for x in result:\n        entry[x] = entry.get(x, 0) + 1\n    element = result[0]\n    for x in result:\n        if entry[x] > entry[element]:\n            element = x\n    return element"
+    ]
+  },
+  {
+    "id": "least_frequent",
+    "family": "mode_selection",
+    "task": "Given a non-empty list, return a value with the lowest occurrence count, choosing the first such value on ties.",
+    "nl": [
+      "Build occurrence counts. Then scan the original list while tracking the best value and lowest count seen. Replace the best only when a strictly lower count is found. Return the best value.",
+      "Build occurrence counts. Then scan the original list while tracking the best value and lowest count seen. Replace the best only when a strictly lower count is found. Output the best value.",
+      "Initialize occurrence counts. Then scan the original list while tracking the best value and lowest count seen. Replace the best only when a strictly lower count is found. Produce the best value."
+    ],
+    "python": [
+      "def least_frequent(values):\n    counts = {}\n    for value in values:\n        counts[value] = counts.get(value, 0) + 1\n    best = values[0]\n    for value in values:\n        if counts[value] < counts[best]:\n            best = value\n    return best",
+      "def least_frequent(output):\n    value = {}\n    for current in output:\n        value[current] = value.get(current, 0) + 1\n    item = output[0]\n    for current in output:\n        if value[current] < value[item]:\n            item = current\n    return item",
+      "def least_frequent(result):\n    entry = {}\n    for x in result:\n        entry[x] = entry.get(x, 0) + 1\n    element = result[0]\n    for x in result:\n        if entry[x] < entry[element]:\n            element = x\n    return element"
+    ]
+  },
+  {
+    "id": "partition_by_sign",
+    "family": "partition",
+    "task": "Given a list of numbers, return two lists: negative values first and nonnegative values second, preserving input order within each group.",
+    "nl": [
+      "Create an empty negative list and an empty nonnegative list. Examine each number and append it to the appropriate list according to its sign. Return both lists.",
+      "Build an empty negative list and an empty nonnegative list. Inspect each number and add it to the appropriate list according to its sign. Output both lists.",
+      "Initialize an empty negative list and an empty nonnegative list. Process each number and append it to the appropriate list according to its sign. Produce both lists."
+    ],
+    "python": [
+      "def partition_by_sign(values):\n    negative = []\n    nonnegative = []\n    for value in values:\n        if value < 0:\n            negative.append(value)\n        else:\n            nonnegative.append(value)\n    return negative, nonnegative",
+      "def partition_by_sign(output):\n    item = []\n    value = []\n    for current in output:\n        if current < 0:\n            item.append(current)\n        else:\n            value.append(current)\n    return item, value",
+      "def partition_by_sign(result):\n    element = []\n    entry = []\n    for x in result:\n        if x < 0:\n            element.append(x)\n        else:\n            entry.append(x)\n    return element, entry"
+    ]
+  },
+  {
+    "id": "partition_by_threshold",
+    "family": "partition",
+    "task": "Given a list of numbers and a threshold, return two lists: values below the threshold and values at least the threshold, preserving order.",
+    "nl": [
+      "Create two empty result lists. Examine each number and append it to the below-threshold list or the other list according to the comparison. Return both lists.",
+      "Build two empty result lists. Inspect each number and add it to the below-threshold list or the other list according to the comparison. Output both lists.",
+      "Initialize two empty result lists. Process each number and append it to the below-threshold list or the other list according to the comparison. Produce both lists."
+    ],
+    "python": [
+      "def partition_by_threshold(values, threshold):\n    below = []\n    at_least = []\n    for value in values:\n        if value < threshold:\n            below.append(value)\n        else:\n            at_least.append(value)\n    return below, at_least",
+      "def partition_by_threshold(counter, current):\n    value = []\n    item = []\n    for output in counter:\n        if output < current:\n            value.append(output)\n        else:\n            item.append(output)\n    return value, item",
+      "def partition_by_threshold(n_count, x):\n    entry = []\n    element = []\n    for result in n_count:\n        if result < x:\n            entry.append(result)\n        else:\n            element.append(result)\n    return entry, element"
+    ]
+  },
+  {
+    "id": "rotate_left_one",
+    "family": "rotation",
+    "task": "Given a non-empty list, rotate it left by one position.",
+    "nl": [
+      "Create an empty result list. Append every element except the first in original order, then append the original first element. Return the result.",
+      "Build an empty result list. Add every element except the first in original order, then add the original first element. Output the result.",
+      "Initialize an empty result list. Place every element except the first in original order, then append the original first element. Produce the result."
+    ],
+    "python": [
+      "def rotate_left_one(values):\n    result = []\n    for value in values[1:]:\n        result.append(value)\n    result.append(values[0])\n    return result",
+      "def rotate_left_one(current):\n    item = []\n    for value in current[1:]:\n        item.append(value)\n    item.append(current[0])\n    return item",
+      "def rotate_left_one(x):\n    element = []\n    for entry in x[1:]:\n        element.append(entry)\n    element.append(x[0])\n    return element"
+    ]
+  },
+  {
+    "id": "rotate_right_one",
+    "family": "rotation",
+    "task": "Given a non-empty list, rotate it right by one position.",
+    "nl": [
+      "Create an empty result list. Append the original last element, then append every earlier element in original order. Return the result.",
+      "Build an empty result list. Add the original last element, then add every earlier element in original order. Output the result.",
+      "Initialize an empty result list. Place the original last element, then append every earlier element in original order. Produce the result."
+    ],
+    "python": [
+      "def rotate_right_one(values):\n    result = [values[-1]]\n    for value in values[:-1]:\n        result.append(value)\n    return result",
+      "def rotate_right_one(current):\n    item = [current[-1]]\n    for value in current[:-1]:\n        item.append(value)\n    return item",
+      "def rotate_right_one(x):\n    element = [x[-1]]\n    for entry in x[:-1]:\n        element.append(entry)\n    return element"
+    ]
+  },
+  {
+    "id": "reverse_list",
+    "family": "reverse_sequence",
+    "task": "Given a list, create a new list containing the same values in reverse order.",
+    "nl": [
+      "Create an empty result list. Examine the input from the last position to the first and append each value to the result. Return the result.",
+      "Build an empty result list. Inspect the input from the last position to the first and add each value to the result. Output the result.",
+      "Initialize an empty result list. Process the input from the last position to the first and append each value to the result. Produce the result."
+    ],
+    "python": [
+      "def reverse_list(values):\n    result = []\n    for index in range(len(values) - 1, -1, -1):\n        result.append(values[index])\n    return result",
+      "def reverse_list(current):\n    value = []\n    for item in range(len(current) - 1, -1, -1):\n        value.append(current[item])\n    return value",
+      "def reverse_list(x):\n    entry = []\n    for element in range(len(x) - 1, -1, -1):\n        entry.append(x[element])\n    return entry"
+    ]
+  },
+  {
+    "id": "reverse_string",
+    "family": "reverse_sequence",
+    "task": "Given a string, create a new string containing the same characters in reverse order.",
+    "nl": [
+      "Start with an empty result string. Examine the input from the last position to the first and append each character to the result. Return the result.",
+      "Begin with an empty result string. Inspect the input from the last position to the first and add each character to the result. Output the result.",
+      "Initialize with an empty result string. Process the input from the last position to the first and append each character to the result. Produce the result."
+    ],
+    "python": [
+      "def reverse_string(text):\n    result = \"\"\n    for index in range(len(text) - 1, -1, -1):\n        result += text[index]\n    return result",
+      "def reverse_string(current):\n    value = \"\"\n    for item in range(len(current) - 1, -1, -1):\n        value += current[item]\n    return value",
+      "def reverse_string(x):\n    entry = \"\"\n    for element in range(len(x) - 1, -1, -1):\n        entry += x[element]\n    return entry"
+    ]
+  },
+  {
+    "id": "flatten_lists",
+    "family": "flatten_one_level",
+    "task": "Given a list of lists, flatten exactly one level into a single list.",
+    "nl": [
+      "Create an empty result list. Examine each inner list in order, then append each of its values to the result. Return the result.",
+      "Build an empty result list. Inspect each inner list in order, then add each of its values to the result. Output the result.",
+      "Initialize an empty result list. Process each inner list in order, then append each of its values to the result. Produce the result."
+    ],
+    "python": [
+      "def flatten_lists(groups):\n    result = []\n    for group in groups:\n        for value in group:\n            result.append(value)\n    return result",
+      "def flatten_lists(value):\n    current = []\n    for item in value:\n        for output in item:\n            current.append(output)\n    return current",
+      "def flatten_lists(entry):\n    x = []\n    for element in entry:\n        for result in element:\n            x.append(result)\n    return x"
+    ]
+  },
+  {
+    "id": "flatten_pairs",
+    "family": "flatten_one_level",
+    "task": "Given a list of two-element pairs, flatten the pairs into one list in pair order.",
+    "nl": [
+      "Create an empty result list. Examine each pair in order and append its first value followed by its second value. Return the result.",
+      "Build an empty result list. Inspect each pair in order and add its first value followed by its second value. Output the result.",
+      "Initialize an empty result list. Process each pair in order and append its first value followed by its second value. Produce the result."
+    ],
+    "python": [
+      "def flatten_pairs(pairs):\n    result = []\n    for pair in pairs:\n        result.append(pair[0])\n        result.append(pair[1])\n    return result",
+      "def flatten_pairs(value):\n    current = []\n    for item in value:\n        current.append(item[0])\n        current.append(item[1])\n    return current",
+      "def flatten_pairs(entry):\n    x = []\n    for element in entry:\n        x.append(element[0])\n        x.append(element[1])\n    return x"
+    ]
+  },
+  {
+    "id": "transpose_matrix",
+    "family": "matrix_transform",
+    "task": "Given a non-empty rectangular matrix, return its transpose.",
+    "nl": [
+      "Create an empty result. For every column index, build a new row by taking that column value from each original row. Append each new row and return the result.",
+      "Build an empty result. For every column index, build a new row by taking that column value from each original row. Add each new row and output the result.",
+      "Initialize an empty result. For every column index, build a new row by taking that column value from each original row. Place each new row and return the result."
+    ],
+    "python": [
+      "def transpose_matrix(matrix):\n    result = []\n    for col in range(len(matrix[0])):\n        new_row = []\n        for row in matrix:\n            new_row.append(row[col])\n        result.append(new_row)\n    return result",
+      "def transpose_matrix(value):\n    output = []\n    for item in range(len(value[0])):\n        current = []\n        for counter in value:\n            current.append(counter[item])\n        output.append(current)\n    return output",
+      "def transpose_matrix(entry):\n    result = []\n    for element in range(len(entry[0])):\n        x = []\n        for n_count in entry:\n            x.append(n_count[element])\n        result.append(x)\n    return result"
+    ]
+  },
+  {
+    "id": "rotate_matrix_clockwise",
+    "family": "matrix_transform",
+    "task": "Given a non-empty square matrix, return a new matrix rotated ninety degrees clockwise.",
+    "nl": [
+      "Create an empty result. For each original column from left to right, build a row by reading that column from bottom to top. Append each row and return the result.",
+      "Build an empty result. For each original column from left to right, build a row by reading that column from bottom to top. Add each row and output the result.",
+      "Initialize an empty result. For each original column from left to right, build a row by reading that column from bottom to top. Place each row and return the result."
+    ],
+    "python": [
+      "def rotate_matrix_clockwise(matrix):\n    result = []\n    size = len(matrix)\n    for col in range(size):\n        new_row = []\n        for row in range(size - 1, -1, -1):\n            new_row.append(matrix[row][col])\n        result.append(new_row)\n    return result",
+      "def rotate_matrix_clockwise(value):\n    output = []\n    total_value = len(value)\n    for item in range(total_value):\n        current = []\n        for counter in range(total_value - 1, -1, -1):\n            current.append(value[counter][item])\n        output.append(current)\n    return output",
+      "def rotate_matrix_clockwise(entry):\n    result = []\n    aggregate = len(entry)\n    for element in range(aggregate):\n        x = []\n        for n_count in range(aggregate - 1, -1, -1):\n            x.append(entry[n_count][element])\n        result.append(x)\n    return result"
+    ]
+  },
+  {
+    "id": "main_diagonal_sum",
+    "family": "diagonal_aggregate",
+    "task": "Given a square matrix, calculate the sum of its main diagonal.",
+    "nl": [
+      "Start a total at zero. For every index, add the matrix element whose row and column both equal that index. Return the total.",
+      "Begin a total at zero. For every index, add the matrix element whose row and column both equal that index. Output the total.",
+      "Initialize a total at zero. For every index, add the matrix element whose row and column both equal that index. Produce the total."
+    ],
+    "python": [
+      "def main_diagonal_sum(matrix):\n    total = 0\n    for index in range(len(matrix)):\n        total += matrix[index][index]\n    return total",
+      "def main_diagonal_sum(value):\n    current = 0\n    for item in range(len(value)):\n        current += value[item][item]\n    return current",
+      "def main_diagonal_sum(entry):\n    x = 0\n    for element in range(len(entry)):\n        x += entry[element][element]\n    return x"
+    ]
+  },
+  {
+    "id": "anti_diagonal_sum",
+    "family": "diagonal_aggregate",
+    "task": "Given a square matrix, calculate the sum of its anti-diagonal.",
+    "nl": [
+      "Start a total at zero. For every row index, add the element whose column index is the mirrored position from the right. Return the total.",
+      "Begin a total at zero. For every row index, add the element whose column index is the mirrored position from the right. Output the total.",
+      "Initialize a total at zero. For every row index, add the element whose column index is the mirrored position from the right. Produce the total."
+    ],
+    "python": [
+      "def anti_diagonal_sum(matrix):\n    total = 0\n    size = len(matrix)\n    for row in range(size):\n        total += matrix[row][size - 1 - row]\n    return total",
+      "def anti_diagonal_sum(item):\n    output = 0\n    current = len(item)\n    for value in range(current):\n        output += item[value][current - 1 - value]\n    return output",
+      "def anti_diagonal_sum(element):\n    result = 0\n    x = len(element)\n    for entry in range(x):\n        result += element[entry][x - 1 - entry]\n    return result"
+    ]
+  },
+  {
+    "id": "matrix_row_sums",
+    "family": "matrix_aggregate",
+    "task": "Given a matrix of numbers, return a list containing the sum of each row.",
+    "nl": [
+      "Create an empty result list. For each row, start a row total at zero, add every value in the row, and append the row total. Return the result.",
+      "Build an empty result list. For each row, start a row total at zero, add every value in the row, and add the row total. Output the result.",
+      "Initialize an empty result list. For each row, start a row total at zero, add every value in the row, and append the row total. Produce the result."
+    ],
+    "python": [
+      "def matrix_row_sums(matrix):\n    result = []\n    for row in matrix:\n        total = 0\n        for value in row:\n            total += value\n        result.append(total)\n    return result",
+      "def matrix_row_sums(item):\n    value = []\n    for current in item:\n        output = 0\n        for counter in current:\n            output += counter\n        value.append(output)\n    return value",
+      "def matrix_row_sums(element):\n    entry = []\n    for x in element:\n        result = 0\n        for n_count in x:\n            result += n_count\n        entry.append(result)\n    return entry"
+    ]
+  },
+  {
+    "id": "matrix_column_sums",
+    "family": "matrix_aggregate",
+    "task": "Given a non-empty rectangular matrix of numbers, return a list containing the sum of each column.",
+    "nl": [
+      "Create an empty result list. For each column index, start a total at zero, add that column's value from every row, and append the total. Return the result.",
+      "Build an empty result list. For each column index, start a total at zero, add that column's value from every row, and add the total. Output the result.",
+      "Initialize an empty result list. For each column index, start a total at zero, add that column's value from every row, and append the total. Produce the result."
+    ],
+    "python": [
+      "def matrix_column_sums(matrix):\n    result = []\n    for col in range(len(matrix[0])):\n        total = 0\n        for row in matrix:\n            total += row[col]\n        result.append(total)\n    return result",
+      "def matrix_column_sums(value):\n    current = []\n    for item in range(len(value[0])):\n        counter = 0\n        for output in value:\n            counter += output[item]\n        current.append(counter)\n    return current",
+      "def matrix_column_sums(entry):\n    x = []\n    for element in range(len(entry[0])):\n        n_count = 0\n        for result in entry:\n            n_count += result[element]\n        x.append(n_count)\n    return x"
+    ]
+  },
+  {
+    "id": "matrix_contains",
+    "family": "matrix_search",
+    "task": "Given a matrix and a target value, determine whether the target occurs anywhere in the matrix.",
+    "nl": [
+      "Examine every row and every value within each row. Return true as soon as a value equals the target. Return false if the whole matrix is scanned without a match.",
+      "Inspect every row and every value within each row. Output true as soon as a value equals the target. Output false if the whole matrix is scanned without a match.",
+      "Process every row and every value within each row. Produce true as soon as a value equals the target. Produce false if the whole matrix is scanned without a match."
+    ],
+    "python": [
+      "def matrix_contains(matrix, target):\n    for row in matrix:\n        for value in row:\n            if value == target:\n                return True\n    return False",
+      "def matrix_contains(item, current):\n    for value in item:\n        for output in value:\n            if output == current:\n                return True\n    return False",
+      "def matrix_contains(element, x):\n    for entry in element:\n        for result in entry:\n            if result == x:\n                return True\n    return False"
+    ]
+  },
+  {
+    "id": "matrix_find_position",
+    "family": "matrix_search",
+    "task": "Given a matrix and a target value, return the row and column of the first occurrence in row-major order, or minus one for both if absent.",
+    "nl": [
+      "Scan rows from top to bottom and columns from left to right. When a value equals the target, return its row and column indices. If no match exists, return minus one for both indices.",
+      "Scan rows from top to bottom and columns from left to right. If a value equals the target, output its row and column indices. If no match exists, output minus one for both indices.",
+      "Scan rows from top to bottom and columns from left to right. Whenever a value equals the target, return its row and column indices. If no match exists, return minus one for both indices."
+    ],
+    "python": [
+      "def matrix_find_position(matrix, target):\n    for row in range(len(matrix)):\n        for col in range(len(matrix[row])):\n            if matrix[row][col] == target:\n                return row, col\n    return -1, -1",
+      "def matrix_find_position(value, output):\n    for current in range(len(value)):\n        for item in range(len(value[current])):\n            if value[current][item] == output:\n                return current, item\n    return -1, -1",
+      "def matrix_find_position(entry, result):\n    for x in range(len(entry)):\n        for element in range(len(entry[x])):\n            if entry[x][element] == result:\n                return x, element\n    return -1, -1"
+    ]
+  },
+  {
+    "id": "binary_search_exact",
+    "family": "binary_search",
+    "task": "Given an ascending sorted list and a target value, return the target index or minus one if absent.",
+    "nl": [
+      "Set low and high indices around the search range. Repeatedly inspect the middle value, returning its index on a match. Discard the half that cannot contain the target. Return minus one if the range becomes empty.",
+      "Set low and high indices around the search range. Repeatedly inspect the middle value, returning its index on a match. Discard the half that cannot contain the target. Output minus one if the range becomes empty.",
+      "Set low and high indices around the search range. Repeatedly inspect the middle value, returning its index on a match. Discard the half that cannot contain the target. Produce minus one if the range becomes empty."
+    ],
+    "python": [
+      "def binary_search_exact(values, target):\n    low = 0\n    high = len(values) - 1\n    while low <= high:\n        middle = (low + high) // 2\n        if values[middle] == target:\n            return middle\n        if values[middle] < target:\n            low = middle + 1\n        else:\n            high = middle - 1\n    return -1",
+      "def binary_search_exact(counter, output):\n    value = 0\n    item = len(counter) - 1\n    while value <= item:\n        current = (value + item) // 2\n        if counter[current] == output:\n            return current\n        if counter[current] < output:\n            value = current + 1\n        else:\n            item = current - 1\n    return -1",
+      "def binary_search_exact(n_count, result):\n    entry = 0\n    element = len(n_count) - 1\n    while entry <= element:\n        x = (entry + element) // 2\n        if n_count[x] == result:\n            return x\n        if n_count[x] < result:\n            entry = x + 1\n        else:\n            element = x - 1\n    return -1"
+    ]
+  },
+  {
+    "id": "binary_search_insertion",
+    "family": "binary_search",
+    "task": "Given an ascending sorted list and a target value, return the index where the target could be inserted while preserving order.",
+    "nl": [
+      "Set low to the start and high just past the end. Repeatedly inspect the middle. Move low right when the middle value is below the target; otherwise move high to the middle. Return low when the range closes.",
+      "Set low to the start and high just past the end. Repeatedly inspect the middle. Move low right when the middle value is below the target; otherwise move high to the middle. Output low when the range closes.",
+      "Set low to the start and high just past the end. Repeatedly inspect the middle. Move low right when the middle value is below the target; otherwise move high to the middle. Produce low when the range closes."
+    ],
+    "python": [
+      "def binary_search_insertion(values, target):\n    low = 0\n    high = len(values)\n    while low < high:\n        middle = (low + high) // 2\n        if values[middle] < target:\n            low = middle + 1\n        else:\n            high = middle\n    return low",
+      "def binary_search_insertion(counter, output):\n    value = 0\n    item = len(counter)\n    while value < item:\n        current = (value + item) // 2\n        if counter[current] < output:\n            value = current + 1\n        else:\n            item = current\n    return value",
+      "def binary_search_insertion(n_count, result):\n    entry = 0\n    element = len(n_count)\n    while entry < element:\n        x = (entry + element) // 2\n        if n_count[x] < result:\n            entry = x + 1\n        else:\n            element = x\n    return entry"
+    ]
+  },
+  {
+    "id": "linear_first_index",
+    "family": "linear_search",
+    "task": "Given a list and a target, return the index of the first target occurrence or minus one if absent.",
+    "nl": [
+      "Examine the list from left to right while tracking the index. Return the index at the first value equal to the target. Return minus one if no match is found.",
+      "Inspect the list from left to right while tracking the index. Output the index at the first value equal to the target. Output minus one if no match is found.",
+      "Process the list from left to right while tracking the index. Produce the index at the first value equal to the target. Produce minus one if no match is found."
+    ],
+    "python": [
+      "def linear_first_index(values, target):\n    for index, value in enumerate(values):\n        if value == target:\n            return index\n    return -1",
+      "def linear_first_index(output, value):\n    for item, current in enumerate(output):\n        if current == value:\n            return item\n    return -1",
+      "def linear_first_index(result, entry):\n    for element, x in enumerate(result):\n        if x == entry:\n            return element\n    return -1"
+    ]
+  },
+  {
+    "id": "linear_last_index",
+    "family": "linear_search",
+    "task": "Given a list and a target, return the index of the last target occurrence or minus one if absent.",
+    "nl": [
+      "Start a saved index at minus one. Examine the list from left to right. Whenever a value equals the target, replace the saved index with the current index. Return the saved index after the scan.",
+      "Begin a saved index at minus one. Inspect the list from left to right. If a value equals the target, replace the saved index with the current index. Output the saved index after the scan.",
+      "Initialize a saved index at minus one. Process the list from left to right. For any case in which a value equals the target, replace the saved index with the current index. Produce the saved index after the scan."
+    ],
+    "python": [
+      "def linear_last_index(values, target):\n    found = -1\n    for index, value in enumerate(values):\n        if value == target:\n            found = index\n    return found",
+      "def linear_last_index(counter, current):\n    item = -1\n    for value, output in enumerate(counter):\n        if output == current:\n            item = value\n    return item",
+      "def linear_last_index(n_count, x):\n    element = -1\n    for entry, result in enumerate(n_count):\n        if result == x:\n            element = entry\n    return element"
+    ]
+  },
+  {
+    "id": "bubble_sort_ascending",
+    "family": "bubble_sort",
+    "task": "Given a list of numbers, sort it in ascending order using bubble sort and return the sorted copy.",
+    "nl": [
+      "Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is greater than the right value. After enough passes, return the copy.",
+      "Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is greater than the right value. After enough passes, output the copy.",
+      "Proceed as follows. Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is greater than the right value. After enough passes, return the copy."
+    ],
+    "python": [
+      "def bubble_sort_ascending(values):\n    result = values[:]\n    for end in range(len(result) - 1, 0, -1):\n        for index in range(end):\n            if result[index] > result[index + 1]:\n                result[index], result[index + 1] = result[index + 1], result[index]\n    return result",
+      "def bubble_sort_ascending(output):\n    current = output[:]\n    for item in range(len(current) - 1, 0, -1):\n        for value in range(item):\n            if current[value] > current[value + 1]:\n                current[value], current[value + 1] = current[value + 1], current[value]\n    return current",
+      "def bubble_sort_ascending(result):\n    x = result[:]\n    for element in range(len(x) - 1, 0, -1):\n        for entry in range(element):\n            if x[entry] > x[entry + 1]:\n                x[entry], x[entry + 1] = x[entry + 1], x[entry]\n    return x"
+    ]
+  },
+  {
+    "id": "bubble_sort_descending",
+    "family": "bubble_sort",
+    "task": "Given a list of numbers, sort it in descending order using bubble sort and return the sorted copy.",
+    "nl": [
+      "Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is less than the right value. After enough passes, return the copy.",
+      "Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is less than the right value. After enough passes, output the copy.",
+      "Proceed as follows. Copy the input list. Repeatedly scan adjacent pairs and swap them when the left value is less than the right value. After enough passes, return the copy."
+    ],
+    "python": [
+      "def bubble_sort_descending(values):\n    result = values[:]\n    for end in range(len(result) - 1, 0, -1):\n        for index in range(end):\n            if result[index] < result[index + 1]:\n                result[index], result[index + 1] = result[index + 1], result[index]\n    return result",
+      "def bubble_sort_descending(output):\n    current = output[:]\n    for item in range(len(current) - 1, 0, -1):\n        for value in range(item):\n            if current[value] < current[value + 1]:\n                current[value], current[value + 1] = current[value + 1], current[value]\n    return current",
+      "def bubble_sort_descending(result):\n    x = result[:]\n    for element in range(len(x) - 1, 0, -1):\n        for entry in range(element):\n            if x[entry] < x[entry + 1]:\n                x[entry], x[entry + 1] = x[entry + 1], x[entry]\n    return x"
+    ]
+  },
+  {
+    "id": "insertion_sort_ascending",
+    "family": "insertion_sort",
+    "task": "Given a list of numbers, sort it in ascending order using insertion sort and return the sorted copy.",
+    "nl": [
+      "Copy the list. Starting with the second element, shift larger earlier values one position right until the current value can be inserted in order. Return the copy.",
+      "Copy the list. Starting with the second element, shift larger earlier values one position right until the current value can be inserted in order. Output the copy.",
+      "Copy the list. Starting with the second element, shift larger earlier values one position right until the current value can be inserted in order. Produce the copy."
+    ],
+    "python": [
+      "def insertion_sort_ascending(values):\n    result = values[:]\n    for index in range(1, len(result)):\n        current = result[index]\n        position = index - 1\n        while position >= 0 and result[position] > current:\n            result[position + 1] = result[position]\n            position -= 1\n        result[position + 1] = current\n    return result",
+      "def insertion_sort_ascending(counter):\n    output = counter[:]\n    for value in range(1, len(output)):\n        item = output[value]\n        current = value - 1\n        while current >= 0 and output[current] > item:\n            output[current + 1] = output[current]\n            current -= 1\n        output[current + 1] = item\n    return output",
+      "def insertion_sort_ascending(n_count):\n    result = n_count[:]\n    for entry in range(1, len(result)):\n        element = result[entry]\n        x = entry - 1\n        while x >= 0 and result[x] > element:\n            result[x + 1] = result[x]\n            x -= 1\n        result[x + 1] = element\n    return result"
+    ]
+  },
+  {
+    "id": "insertion_sort_descending",
+    "family": "insertion_sort",
+    "task": "Given a list of numbers, sort it in descending order using insertion sort and return the sorted copy.",
+    "nl": [
+      "Copy the list. Starting with the second element, shift smaller earlier values one position right until the current value can be inserted in order. Return the copy.",
+      "Copy the list. Starting with the second element, shift smaller earlier values one position right until the current value can be inserted in order. Output the copy.",
+      "Copy the list. Starting with the second element, shift smaller earlier values one position right until the current value can be inserted in order. Produce the copy."
+    ],
+    "python": [
+      "def insertion_sort_descending(values):\n    result = values[:]\n    for index in range(1, len(result)):\n        current = result[index]\n        position = index - 1\n        while position >= 0 and result[position] < current:\n            result[position + 1] = result[position]\n            position -= 1\n        result[position + 1] = current\n    return result",
+      "def insertion_sort_descending(counter):\n    output = counter[:]\n    for value in range(1, len(output)):\n        item = output[value]\n        current = value - 1\n        while current >= 0 and output[current] < item:\n            output[current + 1] = output[current]\n            current -= 1\n        output[current + 1] = item\n    return output",
+      "def insertion_sort_descending(n_count):\n    result = n_count[:]\n    for entry in range(1, len(result)):\n        element = result[entry]\n        x = entry - 1\n        while x >= 0 and result[x] < element:\n            result[x + 1] = result[x]\n            x -= 1\n        result[x + 1] = element\n    return result"
+    ]
+  },
+  {
+    "id": "selection_sort_ascending",
+    "family": "selection_sort",
+    "task": "Given a list of numbers, sort it in ascending order using selection sort and return the sorted copy.",
+    "nl": [
+      "Copy the list. For each position, find the smallest value in the remaining suffix and swap it into the current position. Return the copy.",
+      "Copy the list. For each position, find the smallest value in the remaining suffix and swap it into the current position. Output the copy.",
+      "Copy the list. For each position, find the smallest value in the remaining suffix and swap it into the current position. Produce the copy."
+    ],
+    "python": [
+      "def selection_sort_ascending(values):\n    result = values[:]\n    for index in range(len(result)):\n        best = index\n        for candidate in range(index + 1, len(result)):\n            if result[candidate] < result[best]:\n                best = candidate\n        result[index], result[best] = result[best], result[index]\n    return result",
+      "def selection_sort_ascending(counter):\n    output = counter[:]\n    for current in range(len(output)):\n        item = current\n        for value in range(current + 1, len(output)):\n            if output[value] < output[item]:\n                item = value\n        output[current], output[item] = output[item], output[current]\n    return output",
+      "def selection_sort_ascending(n_count):\n    result = n_count[:]\n    for x in range(len(result)):\n        element = x\n        for entry in range(x + 1, len(result)):\n            if result[entry] < result[element]:\n                element = entry\n        result[x], result[element] = result[element], result[x]\n    return result"
+    ]
+  },
+  {
+    "id": "selection_sort_descending",
+    "family": "selection_sort",
+    "task": "Given a list of numbers, sort it in descending order using selection sort and return the sorted copy.",
+    "nl": [
+      "Copy the list. For each position, find the largest value in the remaining suffix and swap it into the current position. Return the copy.",
+      "Copy the list. For each position, find the largest value in the remaining suffix and swap it into the current position. Output the copy.",
+      "Copy the list. For each position, find the largest value in the remaining suffix and swap it into the current position. Produce the copy."
+    ],
+    "python": [
+      "def selection_sort_descending(values):\n    result = values[:]\n    for index in range(len(result)):\n        best = index\n        for candidate in range(index + 1, len(result)):\n            if result[candidate] > result[best]:\n                best = candidate\n        result[index], result[best] = result[best], result[index]\n    return result",
+      "def selection_sort_descending(counter):\n    output = counter[:]\n    for current in range(len(output)):\n        item = current\n        for value in range(current + 1, len(output)):\n            if output[value] > output[item]:\n                item = value\n        output[current], output[item] = output[item], output[current]\n    return output",
+      "def selection_sort_descending(n_count):\n    result = n_count[:]\n    for x in range(len(result)):\n        element = x\n        for entry in range(x + 1, len(result)):\n            if result[entry] > result[element]:\n                element = entry\n        result[x], result[element] = result[element], result[x]\n    return result"
+    ]
+  },
+  {
+    "id": "gcd_two",
+    "family": "gcd_family",
+    "task": "Given two nonnegative integers, compute their greatest common divisor using the Euclidean algorithm.",
+    "nl": [
+      "While the second value is not zero, replace the pair with the second value and the remainder of the first divided by the second. Return the first value when the second becomes zero.",
+      "While the second value is not zero, replace the pair with the second value and the remainder of the first divided by the second. Output the first value when the second becomes zero.",
+      "While the second value is not zero, replace the pair with the second value and the remainder of the first divided by the second. Produce the first value when the second becomes zero."
+    ],
+    "python": [
+      "def gcd_two(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a",
+      "def gcd_two(item, value):\n    while value != 0:\n        item, value = value, item % value\n    return item",
+      "def gcd_two(element, entry):\n    while entry != 0:\n        element, entry = entry, element % entry\n    return element"
+    ]
+  },
+  {
+    "id": "gcd_list",
+    "family": "gcd_family",
+    "task": "Given a non-empty list of nonnegative integers, compute the greatest common divisor of all values.",
+    "nl": [
+      "Use the first value as the current gcd. For each remaining value, repeatedly apply the Euclidean algorithm to combine it with the current gcd. Return the final gcd.",
+      "Take the first value as the current gcd. For each remaining value, repeatedly apply the Euclidean algorithm to combine it with the current gcd. Output the final gcd.",
+      "Set the first value as the current gcd. For each remaining value, repeatedly apply the Euclidean algorithm to combine it with the current gcd. Produce the final gcd."
+    ],
+    "python": [
+      "def gcd_list(values):\n    current = values[0]\n    for value in values[1:]:\n        a = current\n        b = value\n        while b != 0:\n            a, b = b, a % b\n        current = a\n    return current",
+      "def gcd_list(counter):\n    current = counter[0]\n    for output in counter[1:]:\n        item = current\n        value = output\n        while value != 0:\n            item, value = value, item % value\n        current = item\n    return current",
+      "def gcd_list(n_count):\n    x = n_count[0]\n    for result in n_count[1:]:\n        element = x\n        entry = result\n        while entry != 0:\n            element, entry = entry, element % entry\n        x = element\n    return x"
+    ]
+  },
+  {
+    "id": "lcm_two",
+    "family": "lcm_family",
+    "task": "Given two positive integers, compute their least common multiple using their greatest common divisor.",
+    "nl": [
+      "Compute the greatest common divisor with the Euclidean algorithm, then divide one input by that gcd and multiply by the other input. Return the product.",
+      "Compute the greatest common divisor with the Euclidean algorithm, then divide one input by that gcd and multiply by the other input. Output the product.",
+      "Compute the greatest common divisor with the Euclidean algorithm, then divide one input by that gcd and multiply by the other input. Produce the product."
+    ],
+    "python": [
+      "def lcm_two(a, b):\n    x = a\n    y = b\n    while y != 0:\n        x, y = y, x % y\n    return (a // x) * b",
+      "def lcm_two(item, value):\n    current = item\n    output = value\n    while output != 0:\n        current, output = output, current % output\n    return (item // current) * value",
+      "def lcm_two(element, entry):\n    x = element\n    result = entry\n    while result != 0:\n        x, result = result, x % result\n    return (element // x) * entry"
+    ]
+  },
+  {
+    "id": "lcm_list",
+    "family": "lcm_family",
+    "task": "Given a non-empty list of positive integers, compute the least common multiple of all values.",
+    "nl": [
+      "Use the first value as the current lcm. Combine each remaining value with the current lcm by computing their gcd and then the corresponding lcm. Return the final value.",
+      "Take the first value as the current lcm. Combine each remaining value with the current lcm by computing their gcd and then the corresponding lcm. Output the final value.",
+      "Set the first value as the current lcm. Combine each remaining value with the current lcm by computing their gcd and then the corresponding lcm. Produce the final value."
+    ],
+    "python": [
+      "def lcm_list(values):\n    current = values[0]\n    for value in values[1:]:\n        a = current\n        b = value\n        while b != 0:\n            a, b = b, a % b\n        current = (current // a) * value\n    return current",
+      "def lcm_list(counter):\n    current = counter[0]\n    for output in counter[1:]:\n        item = current\n        value = output\n        while value != 0:\n            item, value = value, item % value\n        current = (current // item) * output\n    return current",
+      "def lcm_list(n_count):\n    x = n_count[0]\n    for result in n_count[1:]:\n        element = x\n        entry = result\n        while entry != 0:\n            element, entry = entry, element % entry\n        x = (x // element) * result\n    return x"
+    ]
+  },
+  {
+    "id": "factorial_iterative",
+    "family": "factorial_product",
+    "task": "Given a nonnegative integer n, compute n factorial iteratively.",
+    "nl": [
+      "Start a product at one. Multiply it by every integer from two through n. Return the final product.",
+      "Begin a product at one. Multiply it by every integer from two through n. Output the final product.",
+      "Initialize a product at one. Multiply it by every integer from two through n. Produce the final product."
+    ],
+    "python": [
+      "def factorial_iterative(n):\n    product = 1\n    for value in range(2, n + 1):\n        product *= value\n    return product",
+      "def factorial_iterative(item):\n    value = 1\n    for current in range(2, item + 1):\n        value *= current\n    return value",
+      "def factorial_iterative(element):\n    entry = 1\n    for x in range(2, element + 1):\n        entry *= x\n    return entry"
+    ]
+  },
+  {
+    "id": "product_one_to_n",
+    "family": "factorial_product",
+    "task": "Given a positive integer n, compute the product of all integers from one through n.",
+    "nl": [
+      "Start a product at one. Examine every integer from one through n, multiplying it into the product. Return the final product.",
+      "Begin a product at one. Inspect every integer from one through n, multiplying it into the product. Output the final product.",
+      "Initialize a product at one. Process every integer from one through n, multiplying it into the product. Produce the final product."
+    ],
+    "python": [
+      "def product_one_to_n(n):\n    product = 1\n    for value in range(1, n + 1):\n        product *= value\n    return product",
+      "def product_one_to_n(item):\n    value = 1\n    for current in range(1, item + 1):\n        value *= current\n    return value",
+      "def product_one_to_n(element):\n    entry = 1\n    for x in range(1, element + 1):\n        entry *= x\n    return entry"
+    ]
+  },
+  {
+    "id": "fibonacci_nth",
+    "family": "fibonacci",
+    "task": "Given a nonnegative integer n with F0 equal to zero and F1 equal to one, return Fn iteratively.",
+    "nl": [
+      "Start with the pair zero and one. Repeat n times, replacing the pair with the second value and the sum of the two values. Return the first value.",
+      "Begin with the pair zero and one. Repeat n times, replacing the pair with the second value and the sum of the two values. Output the first value.",
+      "Initialize with the pair zero and one. Repeat n times, replacing the pair with the second value and the sum of the two values. Produce the first value."
+    ],
+    "python": [
+      "def fibonacci_nth(n):\n    a = 0\n    b = 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a",
+      "def fibonacci_nth(output):\n    value = 0\n    current = 1\n    for item in range(output):\n        value, current = current, value + current\n    return value",
+      "def fibonacci_nth(result):\n    entry = 0\n    x = 1\n    for element in range(result):\n        entry, x = x, entry + x\n    return entry"
+    ]
+  },
+  {
+    "id": "fibonacci_first_n",
+    "family": "fibonacci",
+    "task": "Given a nonnegative integer n, return the first n Fibonacci values starting with zero and one.",
+    "nl": [
+      "Start with zero and one and an empty result list. Repeat n times, append the current first value, then replace the pair with the second value and their sum. Return the result.",
+      "Begin with zero and one and an empty result list. Repeat n times, add the current first value, then replace the pair with the second value and their sum. Output the result.",
+      "Initialize with zero and one and an empty result list. Repeat n times, append the current first value, then replace the pair with the second value and their sum. Produce the result."
+    ],
+    "python": [
+      "def fibonacci_first_n(n):\n    a = 0\n    b = 1\n    result = []\n    for _ in range(n):\n        result.append(a)\n        a, b = b, a + b\n    return result",
+      "def fibonacci_first_n(output):\n    value = 0\n    current = 1\n    counter = []\n    for item in range(output):\n        counter.append(value)\n        value, current = current, value + current\n    return counter",
+      "def fibonacci_first_n(result):\n    entry = 0\n    x = 1\n    n_count = []\n    for element in range(result):\n        n_count.append(entry)\n        entry, x = x, entry + x\n    return n_count"
+    ]
+  },
+  {
+    "id": "digit_sum",
+    "family": "digit_aggregate",
+    "task": "Given a nonnegative integer, compute the sum of its decimal digits.",
+    "nl": [
+      "Start a total at zero. While the number is positive, add its last decimal digit to the total and remove that digit using integer division by ten. Return the total.",
+      "Begin a total at zero. While the number is positive, add its last decimal digit to the total and remove that digit using integer division by ten. Output the total.",
+      "Initialize a total at zero. While the number is positive, add its last decimal digit to the total and remove that digit using integer division by ten. Produce the total."
+    ],
+    "python": [
+      "def digit_sum(number):\n    total = 0\n    while number > 0:\n        total += number % 10\n        number //= 10\n    return total",
+      "def digit_sum(item):\n    value = 0\n    while item > 0:\n        value += item % 10\n        item //= 10\n    return value",
+      "def digit_sum(element):\n    entry = 0\n    while element > 0:\n        entry += element % 10\n        element //= 10\n    return entry"
+    ]
+  },
+  {
+    "id": "digit_product",
+    "family": "digit_aggregate",
+    "task": "Given a positive integer, compute the product of its decimal digits.",
+    "nl": [
+      "Start a product at one. While the number is positive, multiply the product by its last decimal digit and remove that digit using integer division by ten. Return the product.",
+      "Begin a product at one. While the number is positive, multiply the product by its last decimal digit and remove that digit using integer division by ten. Output the product.",
+      "Initialize a product at one. While the number is positive, multiply the product by its last decimal digit and remove that digit using integer division by ten. Produce the product."
+    ],
+    "python": [
+      "def digit_product(number):\n    product = 1\n    while number > 0:\n        product *= number % 10\n        number //= 10\n    return product",
+      "def digit_product(item):\n    value = 1\n    while item > 0:\n        value *= item % 10\n        item //= 10\n    return value",
+      "def digit_product(element):\n    entry = 1\n    while element > 0:\n        entry *= element % 10\n        element //= 10\n    return entry"
+    ]
+  },
+  {
+    "id": "count_digits",
+    "family": "digit_count",
+    "task": "Given a positive integer, count its decimal digits.",
+    "nl": [
+      "Start a counter at zero. While the number is positive, remove its last digit using integer division by ten and increase the counter by one. Return the counter.",
+      "Begin a counter at zero. While the number is positive, remove its last digit using integer division by ten and increase the counter by one. Output the counter.",
+      "Initialize a counter at zero. While the number is positive, remove its last digit using integer division by ten and increase the counter by one. Produce the counter."
+    ],
+    "python": [
+      "def count_digits(number):\n    count = 0\n    while number > 0:\n        number //= 10\n        count += 1\n    return count",
+      "def count_digits(value):\n    item = 0\n    while value > 0:\n        value //= 10\n        item += 1\n    return item",
+      "def count_digits(entry):\n    element = 0\n    while entry > 0:\n        entry //= 10\n        element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "count_even_digits",
+    "family": "digit_count",
+    "task": "Given a positive integer, count how many of its decimal digits are even.",
+    "nl": [
+      "Start a counter at zero. While the number is positive, inspect the last digit, increase the counter if it is even, then remove the digit using integer division by ten. Return the counter.",
+      "Begin a counter at zero. While the number is positive, inspect the last digit, increase the counter if it is even, then remove the digit using integer division by ten. Output the counter.",
+      "Initialize a counter at zero. While the number is positive, inspect the last digit, increase the counter if it is even, then remove the digit using integer division by ten. Produce the counter."
+    ],
+    "python": [
+      "def count_even_digits(number):\n    count = 0\n    while number > 0:\n        digit = number % 10\n        if digit % 2 == 0:\n            count += 1\n        number //= 10\n    return count",
+      "def count_even_digits(current):\n    item = 0\n    while current > 0:\n        value = current % 10\n        if value % 2 == 0:\n            item += 1\n        current //= 10\n    return item",
+      "def count_even_digits(x):\n    element = 0\n    while x > 0:\n        entry = x % 10\n        if entry % 2 == 0:\n            element += 1\n        x //= 10\n    return element"
+    ]
+  },
+  {
+    "id": "reverse_integer",
+    "family": "numeric_reverse",
+    "task": "Given a nonnegative integer, reverse the order of its decimal digits.",
+    "nl": [
+      "Start the reversed value at zero. While the number is positive, take its last digit, append that digit to the reversed value by multiplying by ten and adding, then remove the last input digit. Return the reversed value.",
+      "Begin the reversed value at zero. While the number is positive, take its last digit, add that digit to the reversed value by multiplying by ten and adding, then remove the last input digit. Output the reversed value.",
+      "Initialize the reversed value at zero. While the number is positive, take its last digit, append that digit to the reversed value by multiplying by ten and adding, then remove the last input digit. Produce the reversed value."
+    ],
+    "python": [
+      "def reverse_integer(number):\n    result = 0\n    while number > 0:\n        digit = number % 10\n        result = result * 10 + digit\n        number //= 10\n    return result",
+      "def reverse_integer(value):\n    current = 0\n    while value > 0:\n        item = value % 10\n        current = current * 10 + item\n        value //= 10\n    return current",
+      "def reverse_integer(entry):\n    x = 0\n    while entry > 0:\n        element = entry % 10\n        x = x * 10 + element\n        entry //= 10\n    return x"
+    ]
+  },
+  {
+    "id": "numeric_palindrome",
+    "family": "numeric_reverse",
+    "task": "Given a nonnegative integer, determine whether its decimal digits form a palindrome.",
+    "nl": [
+      "Save the original number and build its reversed decimal value digit by digit. Compare the reversed value with the original and return whether they are equal.",
+      "Save the original number and build its reversed decimal value digit by digit. Compare the reversed value with the original and output whether they are equal.",
+      "Proceed as follows. Save the original number and build its reversed decimal value digit by digit. Compare the reversed value with the original and return whether they are equal."
+    ],
+    "python": [
+      "def numeric_palindrome(number):\n    original = number\n    reversed_number = 0\n    while number > 0:\n        digit = number % 10\n        reversed_number = reversed_number * 10 + digit\n        number //= 10\n    return original == reversed_number",
+      "def numeric_palindrome(value):\n    current = value\n    output = 0\n    while value > 0:\n        item = value % 10\n        output = output * 10 + item\n        value //= 10\n    return current == output",
+      "def numeric_palindrome(entry):\n    x = entry\n    result = 0\n    while entry > 0:\n        element = entry % 10\n        result = result * 10 + element\n        entry //= 10\n    return x == result"
+    ]
+  },
+  {
+    "id": "is_prime",
+    "family": "primality",
+    "task": "Given an integer n, determine whether it is prime.",
+    "nl": [
+      "Return false for values below two. Test divisors starting at two while the divisor squared is no greater than n. Return false if any divisor divides n exactly; otherwise return true.",
+      "Output false for values below two. Test divisors starting at two while the divisor squared is no greater than n. Output false if any divisor divides n exactly; otherwise output true.",
+      "Produce false for values below two. Test divisors starting at two while the divisor squared is no greater than n. Produce false if any divisor divides n exactly; otherwise return true."
+    ],
+    "python": [
+      "def is_prime(n):\n    if n < 2:\n        return False\n    divisor = 2\n    while divisor * divisor <= n:\n        if n % divisor == 0:\n            return False\n        divisor += 1\n    return True",
+      "def is_prime(value):\n    if value < 2:\n        return False\n    item = 2\n    while item * item <= value:\n        if value % item == 0:\n            return False\n        item += 1\n    return True",
+      "def is_prime(entry):\n    if entry < 2:\n        return False\n    element = 2\n    while element * element <= entry:\n        if entry % element == 0:\n            return False\n        element += 1\n    return True"
+    ]
+  },
+  {
+    "id": "count_primes_up_to",
+    "family": "primality",
+    "task": "Given a nonnegative integer n, count how many prime numbers are at most n.",
+    "nl": [
+      "Start a prime counter at zero. For every candidate from two through n, test divisors up to its square root. Increase the counter when no divisor is found. Return the counter.",
+      "Begin a prime counter at zero. For every candidate from two through n, test divisors up to its square root. Increase the counter when no divisor is found. Output the counter.",
+      "Initialize a prime counter at zero. For every candidate from two through n, test divisors up to its square root. Increase the counter when no divisor is found. Produce the counter."
+    ],
+    "python": [
+      "def count_primes_up_to(n):\n    count = 0\n    for candidate in range(2, n + 1):\n        prime = True\n        divisor = 2\n        while divisor * divisor <= candidate:\n            if candidate % divisor == 0:\n                prime = False\n                break\n            divisor += 1\n        if prime:\n            count += 1\n    return count",
+      "def count_primes_up_to(output):\n    value = 0\n    for item in range(2, output + 1):\n        counter = True\n        current = 2\n        while current * current <= item:\n            if item % current == 0:\n                counter = False\n                break\n            current += 1\n        if counter:\n            value += 1\n    return value",
+      "def count_primes_up_to(result):\n    entry = 0\n    for element in range(2, result + 1):\n        n_count = True\n        x = 2\n        while x * x <= element:\n            if element % x == 0:\n                n_count = False\n                break\n            x += 1\n        if n_count:\n            entry += 1\n    return entry"
+    ]
+  },
+  {
+    "id": "list_divisors",
+    "family": "divisors",
+    "task": "Given a positive integer n, return all positive divisors of n in increasing order.",
+    "nl": [
+      "Create an empty result list. Examine every integer from one through n. If n is divisible by the current integer, append it. Return the result.",
+      "Build an empty result list. Inspect every integer from one through n. If n is divisible by the current integer, add it. Output the result.",
+      "Initialize an empty result list. Process every integer from one through n. If n is divisible by the current integer, append it. Produce the result."
+    ],
+    "python": [
+      "def list_divisors(n):\n    result = []\n    for divisor in range(1, n + 1):\n        if n % divisor == 0:\n            result.append(divisor)\n    return result",
+      "def list_divisors(value):\n    current = []\n    for item in range(1, value + 1):\n        if value % item == 0:\n            current.append(item)\n    return current",
+      "def list_divisors(entry):\n    x = []\n    for element in range(1, entry + 1):\n        if entry % element == 0:\n            x.append(element)\n    return x"
+    ]
+  },
+  {
+    "id": "count_divisors",
+    "family": "divisors",
+    "task": "Given a positive integer n, count its positive divisors.",
+    "nl": [
+      "Start a counter at zero. Examine every integer from one through n. If n is divisible by the current integer, increase the counter. Return the counter.",
+      "Begin a counter at zero. Inspect every integer from one through n. If n is divisible by the current integer, increase the counter. Output the counter.",
+      "Initialize a counter at zero. Process every integer from one through n. If n is divisible by the current integer, increase the counter. Produce the counter."
+    ],
+    "python": [
+      "def count_divisors(n):\n    count = 0\n    for divisor in range(1, n + 1):\n        if n % divisor == 0:\n            count += 1\n    return count",
+      "def count_divisors(current):\n    item = 0\n    for value in range(1, current + 1):\n        if current % value == 0:\n            item += 1\n    return item",
+      "def count_divisors(x):\n    element = 0\n    for entry in range(1, x + 1):\n        if x % entry == 0:\n            element += 1\n    return element"
+    ]
+  },
+  {
+    "id": "integer_to_binary",
+    "family": "base_conversion",
+    "task": "Given a positive integer, return its binary representation as a string without a prefix.",
+    "nl": [
+      "Start with an empty digit list. Repeatedly append the remainder after division by two and divide the number by two. Reverse the collected digits, join them, and return the string.",
+      "Begin with an empty digit list. Repeatedly add the remainder after division by two and divide the number by two. Reverse the collected digits, join them, and output the string.",
+      "Initialize with an empty digit list. Repeatedly append the remainder after division by two and divide the number by two. Reverse the collected digits, join them, and return the string."
+    ],
+    "python": [
+      "def integer_to_binary(number):\n    digits = []\n    while number > 0:\n        digits.append(str(number % 2))\n        number //= 2\n    digits.reverse()\n    return \"\".join(digits)",
+      "def integer_to_binary(value):\n    item = []\n    while value > 0:\n        item.append(str(value % 2))\n        value //= 2\n    item.reverse()\n    return \"\".join(item)",
+      "def integer_to_binary(entry):\n    element = []\n    while entry > 0:\n        element.append(str(entry % 2))\n        entry //= 2\n    element.reverse()\n    return \"\".join(element)"
+    ]
+  },
+  {
+    "id": "binary_to_integer",
+    "family": "base_conversion",
+    "task": "Given a string of binary digits, convert it to a nonnegative integer.",
+    "nl": [
+      "Start the result at zero. Examine the digits from left to right, doubling the result and adding the numeric value of the current digit. Return the result.",
+      "Begin the result at zero. Inspect the digits from left to right, doubling the result and adding the numeric value of the current digit. Output the result.",
+      "Initialize the result at zero. Process the digits from left to right, doubling the result and adding the numeric value of the current digit. Produce the result."
+    ],
+    "python": [
+      "def binary_to_integer(text):\n    result = 0\n    for char in text:\n        result = result * 2 + int(char)\n    return result",
+      "def binary_to_integer(current):\n    value = 0\n    for item in current:\n        value = value * 2 + int(item)\n    return value",
+      "def binary_to_integer(x):\n    entry = 0\n    for element in x:\n        entry = entry * 2 + int(element)\n    return entry"
+    ]
+  },
+  {
+    "id": "clamp_values",
+    "family": "bounded_numeric_transform",
+    "task": "Given a list of numbers and lower and upper bounds, clamp each value into the inclusive interval.",
+    "nl": [
+      "Create an empty result list. Examine each value. Replace values below the lower bound with the lower bound, values above the upper bound with the upper bound, and keep all others unchanged. Return the result.",
+      "Build an empty result list. Inspect each value. Replace values below the lower bound with the lower bound, values above the upper bound with the upper bound, and keep all others unchanged. Output the result.",
+      "Initialize an empty result list. Process each value. Replace values below the lower bound with the lower bound, values above the upper bound with the upper bound, and keep all others unchanged. Produce the result."
+    ],
+    "python": [
+      "def clamp_values(values, lower, upper):\n    result = []\n    for value in values:\n        if value < lower:\n            result.append(lower)\n        elif value > upper:\n            result.append(upper)\n        else:\n            result.append(value)\n    return result",
+      "def clamp_values(counter, item, current):\n    value = []\n    for output in counter:\n        if output < item:\n            value.append(item)\n        elif output > current:\n            value.append(current)\n        else:\n            value.append(output)\n    return value",
+      "def clamp_values(n_count, element, x):\n    entry = []\n    for result in n_count:\n        if result < element:\n            entry.append(element)\n        elif result > x:\n            entry.append(x)\n        else:\n            entry.append(result)\n    return entry"
+    ]
+  },
+  {
+    "id": "minmax_normalize",
+    "family": "bounded_numeric_transform",
+    "task": "Given a non-empty list of numbers with distinct minimum and maximum values, scale each value into the interval from zero to one using min-max normalization.",
+    "nl": [
+      "Find the minimum and maximum values. Create an empty result list. For each value, subtract the minimum and divide by the difference between maximum and minimum, then append the result. Return the list.",
+      "Find the minimum and maximum values. Build an empty result list. For each value, subtract the minimum and divide by the difference between maximum and minimum, then add the result. Output the list.",
+      "Find the minimum and maximum values. Initialize an empty result list. For each value, subtract the minimum and divide by the difference between maximum and minimum, then append the result. Produce the list."
+    ],
+    "python": [
+      "def minmax_normalize(values):\n    low = min(values)\n    high = max(values)\n    result = []\n    for value in values:\n        result.append((value - low) / (high - low))\n    return result",
+      "def minmax_normalize(counter):\n    value = min(counter)\n    item = max(counter)\n    current = []\n    for output in counter:\n        current.append((output - value) / (item - value))\n    return current",
+      "def minmax_normalize(n_count):\n    entry = min(n_count)\n    element = max(n_count)\n    x = []\n    for result in n_count:\n        x.append((result - entry) / (element - entry))\n    return x"
+    ]
+  },
+  {
+    "id": "chunks_fixed_size",
+    "family": "chunking",
+    "task": "Given a list and a positive chunk size, split the list into consecutive chunks of at most that size.",
+    "nl": [
+      "Create an empty result list. Move a starting index through the input in steps equal to the chunk size. At each step, append the corresponding slice. Return the result.",
+      "Build an empty result list. Move a starting index through the input in steps equal to the chunk size. At each step, add the corresponding slice. Output the result.",
+      "Initialize an empty result list. Move a starting index through the input in steps equal to the chunk size. At each step, append the corresponding slice. Produce the result."
+    ],
+    "python": [
+      "def chunks_fixed_size(values, size):\n    result = []\n    for start in range(0, len(values), size):\n        result.append(values[start:start + size])\n    return result",
+      "def chunks_fixed_size(output, value):\n    item = []\n    for current in range(0, len(output), value):\n        item.append(output[current:current + value])\n    return item",
+      "def chunks_fixed_size(result, entry):\n    element = []\n    for x in range(0, len(result), entry):\n        element.append(result[x:x + entry])\n    return element"
+    ]
+  },
+  {
+    "id": "chunks_pairs",
+    "family": "chunking",
+    "task": "Given a list, split it into consecutive chunks containing at most two elements.",
+    "nl": [
+      "Create an empty result list. Move a starting index through the input two positions at a time. Append the slice containing that position and the next one if present. Return the result.",
+      "Build an empty result list. Move a starting index through the input two positions at a time. Add the slice containing that position and the next one if present. Output the result.",
+      "Initialize an empty result list. Move a starting index through the input two positions at a time. Place the slice containing that position and the next one if present. Produce the result."
+    ],
+    "python": [
+      "def chunks_pairs(values):\n    result = []\n    for start in range(0, len(values), 2):\n        result.append(values[start:start + 2])\n    return result",
+      "def chunks_pairs(current):\n    item = []\n    for value in range(0, len(current), 2):\n        item.append(current[value:value + 2])\n    return item",
+      "def chunks_pairs(x):\n    element = []\n    for entry in range(0, len(x), 2):\n        element.append(x[entry:entry + 2])\n    return element"
+    ]
+  },
+  {
+    "id": "group_by_first_character",
+    "family": "grouping",
+    "task": "Given a list of non-empty strings, build a dictionary grouping strings by their first character while preserving input order inside each group.",
+    "nl": [
+      "Start with an empty dictionary. Examine each string, use its first character as the key, create an empty list for a new key, and append the string to that key's list. Return the dictionary.",
+      "Begin with an empty dictionary. Inspect each string, use its first character as the key, build an empty list for a new key, and add the string to that key's list. Output the dictionary.",
+      "Initialize with an empty dictionary. Process each string, use its first character as the key, create an empty list for a new key, and append the string to that key's list. Produce the dictionary."
+    ],
+    "python": [
+      "def group_by_first_character(words):\n    groups = {}\n    for word in words:\n        key = word[0]\n        if key not in groups:\n            groups[key] = []\n        groups[key].append(word)\n    return groups",
+      "def group_by_first_character(output):\n    item = {}\n    for current in output:\n        value = current[0]\n        if value not in item:\n            item[value] = []\n        item[value].append(current)\n    return item",
+      "def group_by_first_character(result):\n    element = {}\n    for x in result:\n        entry = x[0]\n        if entry not in element:\n            element[entry] = []\n        element[entry].append(x)\n    return element"
+    ]
+  },
+  {
+    "id": "group_by_length",
+    "family": "grouping",
+    "task": "Given a list of strings, build a dictionary grouping strings by their length while preserving input order inside each group.",
+    "nl": [
+      "Start with an empty dictionary. Examine each string, use its length as the key, create an empty list for a new key, and append the string to that key's list. Return the dictionary.",
+      "Begin with an empty dictionary. Inspect each string, use its length as the key, build an empty list for a new key, and add the string to that key's list. Output the dictionary.",
+      "Initialize with an empty dictionary. Process each string, use its length as the key, create an empty list for a new key, and append the string to that key's list. Produce the dictionary."
+    ],
+    "python": [
+      "def group_by_length(words):\n    groups = {}\n    for word in words:\n        key = len(word)\n        if key not in groups:\n            groups[key] = []\n        groups[key].append(word)\n    return groups",
+      "def group_by_length(output):\n    item = {}\n    for current in output:\n        value = len(current)\n        if value not in item:\n            item[value] = []\n        item[value].append(current)\n    return item",
+      "def group_by_length(result):\n    element = {}\n    for x in result:\n        entry = len(x)\n        if entry not in element:\n            element[entry] = []\n        element[entry].append(x)\n    return element"
+    ]
+  },
+  {
+    "id": "invert_unique_map",
+    "family": "dictionary_transform",
+    "task": "Given a dictionary whose values are unique, return a new dictionary mapping each original value to its original key.",
+    "nl": [
+      "Start with an empty result dictionary. Examine each key and value in the input and assign the original key under the original value in the result. Return the result.",
+      "Begin with an empty result dictionary. Inspect each key and value in the input and assign the original key under the original value in the result. Output the result.",
+      "Initialize with an empty result dictionary. Process each key and value in the input and assign the original key under the original value in the result. Produce the result."
+    ],
+    "python": [
+      "def invert_unique_map(mapping):\n    result = {}\n    for key, value in mapping.items():\n        result[value] = key\n    return result",
+      "def invert_unique_map(value):\n    current = {}\n    for item, output in value.items():\n        current[output] = item\n    return current",
+      "def invert_unique_map(entry):\n    x = {}\n    for element, result in entry.items():\n        x[result] = element\n    return x"
+    ]
+  },
+  {
+    "id": "filter_mapping_by_value",
+    "family": "dictionary_transform",
+    "task": "Given a dictionary with numeric values and a threshold, return a new dictionary containing only entries whose value is greater than the threshold.",
+    "nl": [
+      "Start with an empty result dictionary. Examine each key and value. If the value is greater than the threshold, copy that entry into the result. Return the result.",
+      "Begin with an empty result dictionary. Inspect each key and value. When the value is greater than the threshold, copy that entry into the result. Output the result.",
+      "Initialize with an empty result dictionary. Process each key and value. If the value is greater than the threshold, copy that entry into the result. Produce the result."
+    ],
+    "python": [
+      "def filter_mapping_by_value(mapping, threshold):\n    result = {}\n    for key, value in mapping.items():\n        if value > threshold:\n            result[key] = value\n    return result",
+      "def filter_mapping_by_value(value, output):\n    current = {}\n    for item, counter in value.items():\n        if counter > output:\n            current[item] = counter\n    return current",
+      "def filter_mapping_by_value(entry, result):\n    x = {}\n    for element, n_count in entry.items():\n        if n_count > result:\n            x[element] = n_count\n    return x"
+    ]
+  }
+]

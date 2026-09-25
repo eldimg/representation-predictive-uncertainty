@@ -1,0 +1,40 @@
+{
+  "experiment": "Experiment 8 Sequential Representational Interventions",
+  "timestamp_started_utc": "2026-09-16T13:36:24.344611+00:00",
+  "model_slug": "phi3",
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "revision_requested": "f39ac1d28e925b323eae81227eaba4464caced4e",
+  "model_commit_hash": "f39ac1d28e925b323eae81227eaba4464caced4e",
+  "dtype": "bfloat16",
+  "batch_size": 8,
+  "trajectory_count": 1800,
+  "conditions": [
+    "nl_exp7_anchor",
+    "procedural_prose",
+    "controlled_nl",
+    "pseudocode",
+    "python_canonical",
+    "python_opaque"
+  ],
+  "top_k": 20,
+  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_size": 32011,
+  "model_vocab_size": 32064,
+  "valid_vocab_size_used": 32011,
+  "boundary_crossing_trajectories": 0,
+  "torch_version": "2.11.0+cu128",
+  "transformers_version": "5.17.0",
+  "cuda_version": "12.8",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "cuda_visible_devices": null,
+  "tasks_sha256": "dcdbc196f7dbf394fbf043690c764c470dbbbf9ee333e344c1f62f320a72a164",
+  "ir_sha256": "ae6214ef102ef7188d3959ce14b9e8e3439b70561eca6438d634fda2adcd9bb3",
+  "stimuli_sha256": "0fcc7c0b54f9608c174a75c404344ae01af229ba7c31c5e3f18972b8fb2bbe1e",
+  "validation_report_sha256": "f77109f0e7159d28529498e87f4e9b0d802fdfca0b6948546235dc7712c391cb",
+  "primary_metric": "mean_entropy_top20",
+  "robustness_metrics": [
+    "mean_entropy_valid_vocab",
+    "semantic_step_balanced_entropy_top20"
+  ],
+  "first_reference_token_excluded": true
+}

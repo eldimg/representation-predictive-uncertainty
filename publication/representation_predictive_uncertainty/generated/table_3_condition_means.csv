@@ -1,0 +1,19 @@
+model_slug,model,condition,mean_entropy_top20
+qwen3,Qwen3-4B,nl_exp7_anchor,0.5398764770705757
+qwen3,Qwen3-4B,procedural_prose,0.5346221462132825
+qwen3,Qwen3-4B,controlled_nl,0.4347215266342921
+qwen3,Qwen3-4B,pseudocode,0.3629072198879828
+qwen3,Qwen3-4B,python_canonical,0.17941456333667868
+qwen3,Qwen3-4B,python_opaque,0.2692923357956526
+phi3,Phi-3 mini,nl_exp7_anchor,1.000773409295753
+phi3,Phi-3 mini,procedural_prose,0.7016362712816617
+phi3,Phi-3 mini,controlled_nl,0.6591289685954831
+phi3,Phi-3 mini,pseudocode,0.6173961409391537
+phi3,Phi-3 mini,python_canonical,0.3415798597422854
+phi3,Phi-3 mini,python_opaque,0.550767095073539
+mistral,Mistral 7B,nl_exp7_anchor,1.0563167638034328
+mistral,Mistral 7B,procedural_prose,0.885266989797433
+mistral,Mistral 7B,controlled_nl,0.891049623076572
+mistral,Mistral 7B,pseudocode,0.7942126063787837
+mistral,Mistral 7B,python_canonical,0.42116651213487843
+mistral,Mistral 7B,python_opaque,0.5855739217631492

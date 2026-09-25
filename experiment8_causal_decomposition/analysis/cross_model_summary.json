@@ -1,0 +1,64 @@
+{
+  "experiment": "Experiment 8 Sequential Representational Interventions",
+  "models": {
+    "qwen3": {
+      "model": "Qwen/Qwen3-4B",
+      "commit": "1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    "phi3": {
+      "model": "microsoft/Phi-3-mini-4k-instruct",
+      "commit": "f39ac1d28e925b323eae81227eaba4464caced4e"
+    },
+    "mistral": {
+      "model": "mistralai/Mistral-7B-Instruct-v0.3",
+      "commit": "c170c708c41dac9275d15a8fff4eca08d52bab71"
+    }
+  },
+  "contrasts": {
+    "C1": {
+      "model_statuses": {
+        "qwen3": "ROBUST",
+        "phi3": "ROBUST",
+        "mistral": "NOT SUPPORTED"
+      },
+      "fully_cross_model_replicated": false,
+      "fully_cross_model_robust": false,
+      "interpretation": "sequential representational intervention; no isolated surface-feature attribution"
+    },
+    "C2": {
+      "model_statuses": {
+        "qwen3": "ROBUST",
+        "phi3": "ROBUST",
+        "mistral": "ROBUST"
+      },
+      "fully_cross_model_replicated": true,
+      "fully_cross_model_robust": true,
+      "interpretation": "sequential representational intervention; no isolated surface-feature attribution"
+    },
+    "C3": {
+      "model_statuses": {
+        "qwen3": "ROBUST",
+        "phi3": "ROBUST",
+        "mistral": "ROBUST"
+      },
+      "fully_cross_model_replicated": true,
+      "fully_cross_model_robust": true,
+      "interpretation": "sequential representational intervention; no isolated surface-feature attribution"
+    },
+    "C4": {
+      "model_statuses": {
+        "qwen3": "ROBUST",
+        "phi3": "ROBUST",
+        "mistral": "ROBUST"
+      },
+      "model_interpretations": {
+        "qwen3": "statistically_different_potentially_meaningful",
+        "phi3": "statistically_different_potentially_meaningful",
+        "mistral": "statistically_different_potentially_meaningful"
+      },
+      "cross_model_nonzero_difference_replicated": true,
+      "cross_model_practical_equivalence": false,
+      "heterogeneous": false
+    }
+  }
+}

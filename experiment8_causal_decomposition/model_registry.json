@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "models": [
+    {
+      "slug": "qwen3",
+      "model_id": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "revision_source": "locally cached Hugging Face snapshot used by the closed Experiment 6 run",
+      "c4_equivalence_margin": 0.0360463677
+    },
+    {
+      "slug": "phi3",
+      "model_id": "microsoft/Phi-3-mini-4k-instruct",
+      "revision": "f39ac1d28e925b323eae81227eaba4464caced4e",
+      "revision_source": "Experiment 7 config.json",
+      "c4_equivalence_margin": 0.0659223095
+    },
+    {
+      "slug": "mistral",
+      "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "revision_source": "Experiment 7 config.json",
+      "c4_equivalence_margin": 0.0635291352
+    }
+  ]
+}
