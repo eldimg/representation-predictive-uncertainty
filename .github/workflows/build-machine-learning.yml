@@ -11,7 +11,7 @@ jobs:
       - name: Install TeX and Pandoc
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-publishers latexmk poppler-utils
+          sudo apt-get install -y curl pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-publishers latexmk poppler-utils
       - name: Build PDF and flat submission sources
         shell: bash
         run: |
@@ -20,6 +20,7 @@ jobs:
           mkdir -p submission
           cp "$root"/generated/figure_{1_replication_forest,2_condition_profile,3_intervention_forest,4_c4_equivalence}.png submission/
           cp "$root"/MLJ_SUBMISSION_SOURCE/main.tex submission/main-springer-draft.tex
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/DanySK/template-latex-springer-nature-sn-jnl/master/sn-jnl.cls -o submission/sn-jnl.cls
           cp "$root"/MANUSCRIPT_MLJ_ADAPTED_EN.md submission/manuscript.md
           python3 - <<'PY'
           from pathlib import Path
@@ -40,6 +41,24 @@ jobs:
             -V geometry:margin=1in -V fontsize=10pt -V colorlinks=true \
             -o submission/main.tex
           cd submission
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('main.tex')
+          t=p.read_text()
+          # Rewrite the Pandoc document into the journal's actual sn-jnl class.
+          t=re.sub(r'\\documentclass(?:\[[^]]*\])?\{article\}',r'\\documentclass[sn-basic]{sn-jnl}',t,count=1)
+          t=re.sub(r'\\author\{Yedil Nurakhov\}',r'\\author*[1]{\\fnm{Yedil} \\sur{Nurakhov}}\\email{y.nurakhov@gmail.com}\\affil*[1]{\\orgdiv{Department of Computer Science}, \\orgname{Al-Farabi Kazakh National University}, \\orgaddress{\\city{Almaty}, \\country{Kazakhstan}}}',t,count=1)
+          t=t.replace('\\begin{document}\n\\maketitle','\\begin{document}\n\\maketitle')
+          # The heading is an original Markdown heading rather than a real abstract.
+          t=re.sub(r'\\hypertarget\{abstract\}\{%\s*\\subsection\{Abstract\}\\label\{abstract\}\}',r'\\begin{abstract}',t,count=1)
+          t=re.sub(r'\\hypertarget\{introduction\}',r'\\end{abstract}\n\\keywords{autoregressive language models, predictive entropy, representation dependence, teacher forcing, code and natural language}\n\\hypertarget{introduction}',t,count=1)
+          # Give smaller figures space to flow with neighboring prose.
+          t=t.replace('\\begin{figure}', '\\begin{figure}[!htbp]\\centering')
+          t=re.sub(r'\\includegraphics\{(figure_[^}]+)\}',r'\\includegraphics[width=0.77\\linewidth]{\1}',t)
+          t=t.replace('\\begin{longtable}', '\\begin{longtable}')
+          p.write_text(t)
+          PY
           latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
           pdfinfo main.pdf | head -20
           pdftotext main.pdf extracted.txt
