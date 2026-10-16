@@ -41,6 +41,8 @@ jobs:
           s=re.sub(r'\\documentclass(?:\[[^\]]*\])?\{article\}', lambda m:r'\documentclass[sn-basic]{sn-jnl}',s,count=1)
           s=re.sub(r'\\usepackage(?:\[[^\]]*\])?\{geometry\}', '', s)
           s=re.sub(r'\\geometry\{[^}]+\}', '', s)
+          # Compatibility with older sn-jnl class shipout hooks under TeX Live.
+          s=s.replace(r'\\begin{document}',r'\\makeatletter\\providecommand{\\headerps@out}[1]{}\\makeatother'+'\n'+r'\\begin{document}',1)
           s=re.sub(r'\\author\{Yedil Nurakhov\}',lambda m:r'\author*[1]{\fnm{Yedil} \sur{Nurakhov}}\email{y.nurakhov@gmail.com}'+'\n'+r'\affil*[1]{\orgdiv{Department of Computer Science}, \orgname{Al-Farabi Kazakh National University}, \orgaddress{\city{Almaty}, \country{Kazakhstan}}}',s,count=1)
           s=re.sub(r'\\hypertarget\{abstract\}\{%[\s\S]*?\\label\{abstract\}\}',lambda m:r'\begin{abstract}',s,count=1)
           s=s.replace(r'\hypertarget{introduction}',r'\end{abstract}'+'\n'+r'\keywords{autoregressive language models, predictive entropy, representation dependence, teacher forcing, code and natural language}'+'\n'+r'\hypertarget{introduction}',1)
