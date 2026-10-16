@@ -26,6 +26,8 @@ jobs:
           p=Path('submission/manuscript.md')
           text=p.read_text()
           text=text.replace('(generated/figure_', '(figure_')
+          # Convert original display-math delimiters to Pandoc-supported math blocks.
+          text=text.replace('\\\\[', '$').replace('\\\\]', '$')
           # Markdown author metadata is supplied to pandoc explicitly.
           text=text.replace('# Representation-Dependent Predictive Uncertainty in Autoregressive Language Models\n','',1)
           text=text.replace('**Yedil Nurakhov**  \nDepartment of Computer Science, Al-Farabi Kazakh National University, Almaty, Kazakhstan  \nEmail: y.nurakhov@gmail.com  \nORCID: 0000-0003-0799-7555\n','',1)
