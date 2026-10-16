@@ -48,6 +48,58 @@ jobs:
           t=p.read_text()
           # Rewrite the Pandoc document into the journal's actual sn-jnl class.
           t=re.sub(r'\\documentclass(?:\[[^]]*\])?\{article\}',r'\\documentclass[sn-basic]{sn-jnl}',t,count=1)
+          t=re.sub(r'^\\\\usepackage(?:\\[[^]]*\\])?\\{geometry\\}\\s*
+          t=re.sub(r'\\author\{Yedil Nurakhov\}',r'\\author*[1]{\\fnm{Yedil} \\sur{Nurakhov}}\\email{y.nurakhov@gmail.com}\\affil*[1]{\\orgdiv{Department of Computer Science}, \\orgname{Al-Farabi Kazakh National University}, \\orgaddress{\\city{Almaty}, \\country{Kazakhstan}}}',t,count=1)
+          t=t.replace('\\begin{document}\n\\maketitle','\\begin{document}\n\\maketitle')
+          # The heading is an original Markdown heading rather than a real abstract.
+          t=re.sub(r'\\hypertarget\{abstract\}\{%\s*\\subsection\{Abstract\}\\label\{abstract\}\}',r'\\begin{abstract}',t,count=1)
+          t=re.sub(r'\\hypertarget\{introduction\}',r'\\end{abstract}\n\\keywords{autoregressive language models, predictive entropy, representation dependence, teacher forcing, code and natural language}\n\\hypertarget{introduction}',t,count=1)
+          # Give smaller figures space to flow with neighboring prose.
+          t=t.replace('\\begin{figure}', '\\begin{figure}[!htbp]\\centering')
+          t=re.sub(r'\\includegraphics\{(figure_[^}]+)\}',r'\\includegraphics[width=0.77\\linewidth]{\1}',t)
+          t=t.replace('\\begin{longtable}', '\\begin{longtable}')
+          p.write_text(t)
+          PY
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
+          pdfinfo main.pdf | head -20
+          pdftotext main.pdf extracted.txt
+          for item in '0.3605' '0.6592' '0.6353' '0.1835' '0.3730' '−0.0058'; do
+            if ! grep -Fq "$item" extracted.txt; then echo "Text extraction check: $item not found"; fi
+          done
+          rm -f *.aux *.log *.fls *.fdb_latexmk *.xdv *.out extracted.txt
+      - name: Upload compiled submission package
+        uses: actions/upload-artifact@v4
+        with:
+          name: machine-learning-submission-draft
+          path: submission/
+          if-no-files-found: error
+, '', t, flags=re.MULTILINE)
+          t=re.sub(r'^\\\\geometry\\{[^}]*\\}\\s*
+          t=re.sub(r'\\author\{Yedil Nurakhov\}',r'\\author*[1]{\\fnm{Yedil} \\sur{Nurakhov}}\\email{y.nurakhov@gmail.com}\\affil*[1]{\\orgdiv{Department of Computer Science}, \\orgname{Al-Farabi Kazakh National University}, \\orgaddress{\\city{Almaty}, \\country{Kazakhstan}}}',t,count=1)
+          t=t.replace('\\begin{document}\n\\maketitle','\\begin{document}\n\\maketitle')
+          # The heading is an original Markdown heading rather than a real abstract.
+          t=re.sub(r'\\hypertarget\{abstract\}\{%\s*\\subsection\{Abstract\}\\label\{abstract\}\}',r'\\begin{abstract}',t,count=1)
+          t=re.sub(r'\\hypertarget\{introduction\}',r'\\end{abstract}\n\\keywords{autoregressive language models, predictive entropy, representation dependence, teacher forcing, code and natural language}\n\\hypertarget{introduction}',t,count=1)
+          # Give smaller figures space to flow with neighboring prose.
+          t=t.replace('\\begin{figure}', '\\begin{figure}[!htbp]\\centering')
+          t=re.sub(r'\\includegraphics\{(figure_[^}]+)\}',r'\\includegraphics[width=0.77\\linewidth]{\1}',t)
+          t=t.replace('\\begin{longtable}', '\\begin{longtable}')
+          p.write_text(t)
+          PY
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
+          pdfinfo main.pdf | head -20
+          pdftotext main.pdf extracted.txt
+          for item in '0.3605' '0.6592' '0.6353' '0.1835' '0.3730' '−0.0058'; do
+            if ! grep -Fq "$item" extracted.txt; then echo "Text extraction check: $item not found"; fi
+          done
+          rm -f *.aux *.log *.fls *.fdb_latexmk *.xdv *.out extracted.txt
+      - name: Upload compiled submission package
+        uses: actions/upload-artifact@v4
+        with:
+          name: machine-learning-submission-draft
+          path: submission/
+          if-no-files-found: error
+, '', t, flags=re.MULTILINE)
           t=re.sub(r'\\author\{Yedil Nurakhov\}',r'\\author*[1]{\\fnm{Yedil} \\sur{Nurakhov}}\\email{y.nurakhov@gmail.com}\\affil*[1]{\\orgdiv{Department of Computer Science}, \\orgname{Al-Farabi Kazakh National University}, \\orgaddress{\\city{Almaty}, \\country{Kazakhstan}}}',t,count=1)
           t=t.replace('\\begin{document}\n\\maketitle','\\begin{document}\n\\maketitle')
           # The heading is an original Markdown heading rather than a real abstract.
